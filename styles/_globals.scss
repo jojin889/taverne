@@ -1,0 +1,28 @@
+$color1 : #522b0e;
+$color2: #4a1801;
+$color3: rgba(27,8,1,0.7);
+
+
+html,
+body {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  font-family: "Aniron";
+  background-color: red;
+  color: #fff;
+}
+p {
+  margin:0;
+}
+h1 {
+  margin:0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

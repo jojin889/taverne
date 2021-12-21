@@ -1,0 +1,115 @@
+.menu {
+    height:600vh;
+    
+
+    .menu__container2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            width: 700px;
+            display: flex;
+        }
+        .menu__span {
+            font-size: 20px;
+            width: 225px;
+        }
+    }
+
+    .menu__container {
+        display: flex;
+        padding-top: 220px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    
+     .menu__title {
+        padding: 30px 80px;
+        margin-bottom: 45px;
+        font-size: 50px;
+        -webkit-box-shadow: 3px 4px 10px 5px rgba(27,8,1,0.7); 
+        box-shadow: 3px 4px 10px 5px rgba(27,8,1,0.7);
+     }
+    
+     .menu__categories {
+        width: 80%;
+
+        .menu__categorie {
+            width: 100%;
+
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        p {
+            font-family: 'Inknut Antiqua';
+
+        }
+
+        .italic__comment {
+            font-size: 14px;
+            font-style: italic;
+            font-family: 'Inknut Antiqua';
+
+        }
+        font-size: 15px;
+
+
+        h3 {
+                
+            font-size: 30px;
+            display: inline-block;
+            border-bottom: 4px solid $color2;
+            // margin: 5%;
+
+        }
+        .details_viande {
+            font-size: 15px;
+            display: inline;
+
+            ul {
+                display: inline-flex;
+                align-items: flex-start;
+                flex-direction: column
+            }
+
+            li {
+                list-style: disc;
+                margin: 0;
+            }
+        }
+
+        li {
+            margin: 20px 0px;
+            font-family: 'Inknut Antiqua';
+
+            list-style: none;
+        }
+     }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    #menu {
+
+        height:570vh;
+
+        .menu__categories {
+            width: 96%;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+

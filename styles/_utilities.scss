@@ -1,0 +1,54 @@
+.utilities__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.utilities__div {
+    width: 300px;
+    margin: 60px 30px;
+    background-color: #202020;
+    text-align: center;
+    height: 250px;
+    align-items: center;
+    box-shadow: 0 0 40px rgb(0 0 0 / 65%);
+    border-bottom: 3px solid #4a1801;
+}
+
+.utilities__text {
+    font-size: 14px;
+    margin: 0 auto;
+    width: 240px;
+    font-family: 'Inknut Antiqua';
+
+}
+
+.utilities__logo_div {
+    
+    i {
+        font-size: 35px;
+        margin: 20px 0 10px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #utilities {
+
+        .utilities__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .utilities__div {
+                margin: 18px 10px;
+            }
+        }
+        
+
+}
+}
+
+@media only screen and (max-width: 768px) {
+
+}

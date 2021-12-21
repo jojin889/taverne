@@ -1,0 +1,295 @@
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    z-index: 9;
+    align-items: center;
+    width:100%;
+    color: #fff;
+    position: fixed;    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    border-bottom: 2px solid rgba(41,37,34,0.15);
+    background-color: rgba(41,37,34,0.21);
+
+    .navbar__right {
+        min-width: 512px;
+
+    }
+
+    .navbar__right a::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 4px;
+        background: $color2;
+        transition: width .3s;
+    }
+
+    .navbar__right a:hover::after {
+        width: 100%;
+        //transition: width .3s;
+    }
+
+}
+
+.inactive {
+    display: none;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+}
+
+.display_none {
+    width:200px;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+}
+
+.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: all .7s cubic-bezier(.29,1.03,.65,.99);
+
+    border-bottom: 2px solid rgba(41,37,34,0.21);
+
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+    color: #fff;
+    // height: 100px;
+    position: fixed;
+    background-color: #1C1C1A;
+    z-index: 99;
+    box-shadow: 0 5px 9px 0 rgb(0 0 0 / 25%);
+    .navbar__right {
+        min-width: 512px;
+
+    }
+
+    .navbar__right a::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 4px;
+        background: $color2;
+        transition: width .3s;
+    }
+
+    .navbar__right a:hover::after {
+        width: 100%;
+        //transition: width .3s;
+    }
+
+}
+
+.logo_shield_inactive {
+    opacity: 0;
+    width: 23%;
+    margin-top: 4px;
+    border-radius: 0 0 80px 80px;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+}
+
+
+.logo_shield {
+    width: 23%;
+    margin-top: 4px;
+    border-radius: 0 0 80px 80px;
+    transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+}
+
+.div__logo_shield {
+    display: flex;
+    transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    align-self: flex-start;
+    justify-content: center;    
+}
+
+.navbar__left {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    z-index: 99;
+}
+
+.navbar__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+        display:flex;
+        flex-direction: row;
+        list-style-type: none; /* Remove bullets */
+
+        li {
+            margin: 20px;
+
+            a {
+                transition: all 0.5s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    transition: all 0.5s ease-in-out;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -ms-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    // color: $color1;
+                }
+            }
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+
+    .fa-instagram {
+        font-size: 30px;
+        margin: 0 12px;
+        color:white;
+        cursor:pointer;
+
+        &:hover {
+            color: $color2;
+        }
+    }
+
+    .icon-facebook {
+        font-size: 27px;
+        margin: 0 12px;
+
+
+        &:hover {
+            color: $color2;
+            cursor: pointer;
+        }
+    }
+    }
+
+
+
+// MENU-BTN
+
+.menu-circle {
+    padding: 4px;
+    border: 1px solid $color2;
+    border-radius: 50%;
+}
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border-radius: 30px;
+    // border: thin double white;
+    background-color: $color2;
+}
+
+.menu-btn__burger {
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(10px);
+}
+
+// animation menu-btn
+
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 20% 60%;
+        justify-content: space-evenly;
+
+    }
+    .active {
+        display: grid;
+        grid-template-columns: 20% 60%;
+        justify-content: space-evenly;
+    }
+    .div__logo_shield {
+        display: none;
+    }
+
+    .navbar__right {
+        min-width: 400px;
+        ul {
+            margin: 0;
+    
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}

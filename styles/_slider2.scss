@@ -1,0 +1,98 @@
+.embla2 {
+    position: relative;
+    background-color: $color2;
+    padding: 1px;
+    max-width: 400px;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+  }
+  
+  .embla2__viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .embla2__viewport.is-draggable {
+    cursor: move;
+    cursor: grab;
+  }
+  
+  .embla2__viewport.is-dragging {
+    cursor: grabbing;
+  }
+  
+  .embla2__container {
+    display: flex;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    margin-left: -10px;
+  }
+  
+  .embla2__slide {
+    position: relative;
+    min-width: 100%;
+    padding-left: 10px;
+    width: 100px;
+
+  }
+  
+  .embla2__slide__inner {
+    position: relative;
+    overflow: hidden;
+    
+    height: 550px;
+  }
+  
+  .embla2__slide__img {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 400px;
+    min-height: 100%;
+    min-width: 80%;
+    max-width: none;
+    transform: translate(-50%, -50%);
+  }
+  
+  .embla2__button {
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+    touch-action: manipulation;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    fill: $color2;
+    padding: 0;
+  }
+  
+  .embla2__button:disabled {
+    cursor: default;
+    opacity: 0.3;
+  }
+  
+  .embla2__button__svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .embla2__button--prev {
+    left: 27px;
+  }
+  
+  .embla2__button--next {
+    right: 27px;
+  }
+  

@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import "../styles/styles.scss";
+import { AppWrapper } from "../components/context.js";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <AppWrapper>
+        <Component {...pageProps} />
+      </AppWrapper>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;

@@ -1,0 +1,80 @@
+.hero {
+    // background-image: url("../public/assets/viande.jpg"),url("../public/assets/viande3.jpg"),;
+    background-image: url("../public/assets/meat.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    display: grid;
+    box-shadow: 0 5px 9px 0 rgb(0 0 0 / 25%);
+    grid-template-rows: 1fr 1fr 1fr;
+    
+
+    .hero-title {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30vh;
+        align-items: center;
+        
+
+
+
+        h1 {
+            font-size: 65px;
+            letter-spacing: 4px;
+            text-shadow: black 0.1em 0.1em 0.2em;
+            // border: 8px solid white;
+            padding: 30px 86px;
+            -webkit-box-shadow: 5px 5px 15px 5px #371101; 
+            box-shadow: 5px 5px 15px 5px #220B01;
+
+        }
+    }
+    
+h3 {
+    // font-style: italic;
+    font-size: 30px;
+    margin: 100px 0 80px 0px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+    }
+
+h5 {
+    margin-top: 51px;
+    font-family: 'Inknut Antiqua';
+
+}
+
+.fa-chevron-down {
+    font-size: 40px;
+    cursor: pointer;
+    padding:30px;
+    margin: 0px auto;
+    transition:ease-in-out 0.2s;
+
+    &:hover {
+        color: $color3;
+        transform: scale(1.6);
+        transition:ease-in-out 0.2s;
+    }
+}    
+
+}
+    
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+ 
+
+
+  @media only screen and (max-width: 1024px) {
+      
+}
+
+@media only screen and (max-width: 768px) {
+
+}

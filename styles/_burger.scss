@@ -1,0 +1,49 @@
+.burger__overlay {
+    position: fixed;
+    top: 0;
+    // right: 0;
+    width: 34%;
+    height: 100%;
+    // background: rgb(240, 157, 81, 0.5);
+    // background: rgba(33,33,33,.94);
+    background: rgba(27,8,1,0.95);
+    z-index: 2;
+    // visibility: hidden;
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+    
+
+    .burger {
+        transition: all 0.3s linear;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 6vw;
+        padding-top: 18vh;
+
+        li {
+            list-style: none;
+            font-size: 28px;
+            margin: 10px 0px;
+
+            a {
+                &:hover {
+                    color: $color2;
+                }
+            }
+        }
+    }
+
+    
+  }
+
+.visibility {
+    visibility: visible;
+  }
+
+.showBurger {
+    transform: translateX(0%);
+    transition: all 0.3s linear;
+}
