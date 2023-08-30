@@ -1,7 +1,5 @@
-import { useState, useContext } from "react";
 import Navbar from "../components/navbar";
 import Client from "../components/contentFul";
-
 import Footer from "../components/footer";
 
 const Menu = (props) => {
@@ -21,7 +19,7 @@ const Menu = (props) => {
               <ul>
                 {props.entreeItems.map((entree) => (
                   <div className="menu__container2">
-                    <li>{entree.fields.entreeText}</li>
+                    <li>- {entree.fields.entreeText}</li>
                     <span className="menu__span">
                       {entree.fields.entreePrice}
                     </span>
@@ -29,40 +27,47 @@ const Menu = (props) => {
                 ))}
               </ul>
             </div>
+
+
             <h3>Viande</h3>
 
             <div className="menu__categorie flex">
-              <p className="details_viande">
-                L’origine de nos viandes varie selon la sélection de la Taverne.               
+              <p className="details_viande--first">
+                Race : KOD jersey (Danemark)
               </p>
               <p className="details_viande">
-                  Concernant les :
-                  <ul>
-                    <li>Faux filet de bœuf</li>
-                    <li>Filet de bœuf</li>
-                    <li>Entrecôte de bœuf</li>
-                    <li>Côte de bœuf</li>
-                  </ul>
-                  
-                </p>
-                <p>Merci de se référer à l’ardoise située à l’intérieur du
-                  restaurant.</p>
+                <ul>
+                  <li>- Faux filet de bœuf - 10.50€ / 100gr</li>
+                  <li>- Entrecôte de bœuf - 10.50€ / 100gr</li>
+                  <li>- Côte de bœuf - 10.50€ / 100gr</li>
+                </ul>
+              </p>
+              <p className="details_viande--third">
+                (Les différents poids des pièces disponibles vous seront communiqués lors de
+                votre commande et le prix sera calculé en fonction de votre choix du poids.)
+              </p>
               <ul>
                 {props.viandeItems.map((viande) => (
                   <div className="menu__container2">
-                    <li>{viande.fields.viandeText}</li>{" "}
+                    <li> - {viande.fields.viandeText}</li>{" "}
                     <span className="menu__span">
                       {viande.fields.viandePrice}
                     </span>
                   </div>
                 ))}
               </ul>
+              <p className="details_viande--third">
+                Toutes nos sauces sont faites maison :
+              </p>
+              <ul>
+                {props.sauceItems.map((sauce) => (
+                  <div className="menu__container2--sauce">
+                    <li> - {sauce.fields.sauceText}</li>
+                  </div>
+                ))}
+              </ul>
               <p className="italic__comment">
-                <i class="fas fa-arrow-right"></i>{" "}
-                <span style={{ fontStyle: "italic", fontSize: "14px" }}>
-                  Nos plats sont accompagnés de pomme de terre grenaille et de
-                  légumes frais rôtis
-                </span>
+                <i className="fas fa-arrow-right"></i> Nos plats sont accompagnés de mille feuilles de pommes de terre et de légumes frais rôtis
               </p>
             </div>
             <h3>Poissons</h3>
@@ -71,7 +76,7 @@ const Menu = (props) => {
               <ul>
                 {props.poissonItems.map((poisson) => (
                   <div className="menu__container2">
-                    <li>{poisson.fields.poissonText}</li>{" "}
+                    <li>- {poisson.fields.poissonText}</li>{" "}
                     <span className="menu__span">
                       {poisson.fields.poissonPrice}
                     </span>
@@ -80,17 +85,17 @@ const Menu = (props) => {
               </ul>
 
               <p className="italic__comment">
-                <i class="fas fa-arrow-right"></i> Nos plats sont accompagnés de
-                pomme de terre grenaille et de légumes frais rôtis
+                <i className="fas fa-arrow-right"></i> Nos plats sont accompagnés de mille feuilles de pommes de terre et de légumes frais rôtis
               </p>
             </div>
+
             <h3>Fromages et Desserts</h3>
 
             <div className="menu__categorie">
               <ul>
                 {props.dessertItems.map((dessert) => (
                   <div className="menu__container2">
-                    <li>{dessert.fields.dessertText}</li>{" "}
+                    <li>- {dessert.fields.dessertText}</li>{" "}
                     <span className="menu__span">
                       {dessert.fields.dessertPrice}
                     </span>
@@ -98,6 +103,9 @@ const Menu = (props) => {
                 ))}
               </ul>
             </div>
+
+
+
             <br />
             <p>
               Tous nos plats sont faits maison et élaborés à partir de produits
@@ -107,12 +115,15 @@ const Menu = (props) => {
             <h3>Menu "Le petit Tavernier"</h3>
 
             <div className="menu__categorie">
-              <p style={{ fontSize: "24px" }}>Plat - Dessert - Boisson<span style={{ fontSize: "22px",marginLeft: '9vh' }}>
-                9,00 €
-              </span></p>
-              <p style={{ fontSize: "16px" }}>
+              <p className="menu__descriptif-petitTavernier">
+                Plat - Dessert - Boisson &nbsp;&nbsp;
+                <span className="menu__descriptif-petitTavernier-price">
+                  9,00 €
+                </span>
+              </p>
+              <p>
                 Steak haché Angus, pommes de terre rissolées, <br />
-                Boule de glace vanille avec chantilly – Sirop au choix{" "}
+                1 Boule de glace vanille avec chantilly – Sirop au choix{" "}
               </p>
             </div>
             <br />
@@ -120,58 +131,59 @@ const Menu = (props) => {
             <h3>Formule du jour</h3>
 
             <div className="menu__categorie">
-              <span style={{ fontSize: "24px"}}>
-                14,50 €
-              </span>
-              <p style={{ fontSize: "24px" }}>
+              <span className="menu__descriptif-FormuleJour-price">15,50 €</span>
+              <p className="menu__descriptif-FormuleJour">
                 Plat du jour, dessert du jour et café
               </p>
-              <p style={{ fontSize: "24px" }}>(Ou Plat du jour &nbsp;10,50€)</p>
+              <p className="menu__descriptif-FormuleJour-price2">(Ou Plat du jour &nbsp;11,50€)</p>
             </div>
             <h3>Menu "La Taverne"</h3>
 
             <div className="menu__categorie">
-              <span style={{ fontSize: "24px"}}>
-                29,00 €
-              </span>
+              <span className="menu__descriptif-MenuTaverne-price">38,00 €</span>
+              {/* <span style={{ fontSize: "24px" }}>40,00 €</span> */}
               <h2>Entrées</h2>
-              <p>Velouté de potimarron et chantilly au chèvre</p>
+              <p>{props.menuEntrée1[0].fields.menuEntre1}</p>
               <p>OU</p>
               <p>
-                Reblochon rôti, oignons confits au vin blanc et guanciale grillé
+                {props.menuEntrée2[0].fields.menuEntre2}
               </p>
               <p>OU</p>
-              <p>Tataki de faux filet</p>
+              <p>{props.menuEntrée3[0].fields.menuEntre3}</p>
               <h2>Plats</h2>
-              <p>Bavette de bœuf Angus</p>
+              <p>{props.menuPlat1[0].fields.menuPlat1}</p>
               <p>OU</p>
-              <p>Magret de canard</p>
+              <p>{props.menuPlat2[0].fields.menuPlat2}</p>
               <p>OU</p>
-              <p>Saumon et sa crème au safran</p>
+              <p>{props.menuPlat3[0].fields.menuPlat3}</p>
               <h2>Desserts</h2>
-              <p>Baby Irish Slap</p>
+              <p>Au choix à la carte</p>
+              {/* <p>{props.menuDessert1[0].fields.menuDessert1}</p>
               <p>OU</p>
-              <p>Fondant au chocolat et sa crème anglaise</p>
+              <p>{props.menuDessert2[0].fields.menuDessert2}</p>
               <p>OU</p>
-              <p>Demi-Saint-Marcellin</p>
+              <p>{props.menuDessert3[0].fields.menuDessert3}</p> */}
             </div>
             <h3>La Formule de KARADOC</h3>
 
             <div className="menu__categorie">
-              <span style={{ fontSize: "22px", marginLeft: "7vh" }}>
-                A partager- 29,00 €
+              <span className="menu__descriptif-Apartager-price">
+                A partager- 25,00 €
               </span>
               <p>(Selon arrivage)</p>
-              <p>A partir de 6 personnes</p>
+              <p>A partir de 6 personnes !</p>
               <h2>-Planche de viandes à partager</h2>
-              <p style={{ fontSize: "22px" }}>
+              <p>
                 Environ 350gr de viande/personne
               </p>
               <p>(Détail à la voix)</p>
               <p>+ Accompagnements</p>
+              <p>(Formule imposée pour
+les tables de 8 personnes et plus)</p>
             </div>
           </div>
         </div>
+
       </div>
       <Footer />
     </>
@@ -197,13 +209,57 @@ export async function getStaticProps() {
     content_type: "desserts",
   });
 
+
+  const MenuEntrée1 = await Client.getEntries({
+    content_type: "menuEntre1",
+  });
+  const MenuEntrée2 = await Client.getEntries({
+    content_type: "menuEntre2",
+  });
+  const MenuEntrée3 = await Client.getEntries({
+    content_type: "menuEntre3",
+  });
+
+  const MenuPlat1 = await Client.getEntries({
+    content_type: "menuPlat1",
+  });
+  const MenuPlat2 = await Client.getEntries({
+    content_type: "menuPlat2",
+  });
+  const MenuPlat3 = await Client.getEntries({
+    content_type: "menuPlat3",
+  });
+
+
+  const MenuDessert1 = await Client.getEntries({
+    content_type: "menuDessert1",
+  });
+  const MenuDessert2 = await Client.getEntries({
+    content_type: "menuDessert2",
+  });
+  const MenuDessert3 = await Client.getEntries({
+    content_type: "menuDessert3",
+  })
+
+
+
   return {
     props: {
       entreeItems: entreeData.items,
       poissonItems: poissonData.items,
       viandeItems: viandeData.items,
-      sauceData: sauceData.items,
+      sauceItems: sauceData.items,
       dessertItems: dessertData.items,
+      menuEntrée1: MenuEntrée1.items,
+      menuEntrée2: MenuEntrée2.items,
+      menuEntrée3: MenuEntrée3.items,
+      menuPlat1: MenuPlat1.items,
+      menuPlat2: MenuPlat2.items,
+      menuPlat3: MenuPlat3.items,
+      menuDessert1: MenuDessert1.items,
+      menuDessert2: MenuDessert2.items,
+      menuDessert3: MenuDessert3.items,
+
     },
   };
 }

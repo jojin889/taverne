@@ -1,12 +1,20 @@
 import "../styles/styles.scss";
-import { AppWrapper } from "../components/context.js";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <AppWrapper>
-        <Component {...pageProps} />
-      </AppWrapper>
+      <div id="loading">
+        <div className="lds_ellipsis">
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+        </div>
+      </div>
+      <div>
+        <div id="loloading">
+      <Component {...pageProps}  />
+        </div>
+      </div>
     </>
   );
 }

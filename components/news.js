@@ -1,28 +1,23 @@
-import EmblaCarousel from "./slider";
 import Utilities from "./utilities";
 
-const SLIDE_COUNT = 5;
-const slides = Array.from(Array(SLIDE_COUNT).keys());
-
 const News = () => {
-
   return (
     <div className="news" id="news">
       <div className="present">
-        <h3>Qui sommes nous ?</h3>
+        <h3>La TAVERNE... qui sommes-nous ?</h3>
         <p>
-          La taverneLorem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book. It has survived
-          not.
+        Un bar restaurant, situé à Tignieu, à 30mn à l'est de Lyon.</p>
+<p>Ouvert le midi et le soir selon les jours, à la carte ou en formule, nous vous proposons des plats préparés exclusivement à base de produits frais, des viandes d'exception maturées et des desserts gourmands faits maison.</p>
+
+<p>Sans oublier nos apéritifs : vins choisis, bières diverses et savoureuses et cocktails originaux !</p>
+
+<p>Et pour terminer votre repas en beauté, à vous de choisir parmi une large gamme de rhums et de whiskys, celui que vous dégusterez, avec modération, bien sûr !</p>
+<br />
+
+<p>Alors, amateurs de très bonnes viandes, n'hésitez plus ! A très vite !
         </p>
-      <Utilities />
-
+        <Utilities />
       </div>
-      {/* <h4>Actualités</h4>
-      <EmblaCarousel slides={slides} /> */}
-
     </div>
   );
 };

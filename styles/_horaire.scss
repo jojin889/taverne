@@ -1,9 +1,14 @@
 #horaire {
+
+    background: #1B1D1F;
+    background: #0b1315c9;
+    padding-top: 20px;
+    
     h4 {
         text-align: center;
         font-size: 36px;
         border-bottom: 2px solid $color2;
-        margin: 80px auto 100px;
+        margin: 60px auto 50px;
         width: 600px;
     }
 
@@ -16,7 +21,29 @@
         td {
             padding: 0px 50px;
             font-family: 'Inknut Antiqua';
+        }
+    }
 
+    .paiement_text {
+        border-bottom: 3px solid $color2;
+        width: 375px;
+        margin: 0 auto 20px;
+        font-size: 20px;
+    }
+
+    .paiement {
+        justify-content: center;
+        display: flex;
+        font-size: 17px;
+        flex-direction: row;
+        padding-bottom: 40px;
+
+        .paiement_div {
+            display: flex;
+            margin-right: 35px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -27,4 +54,38 @@
         font-size: 20px;
         text-align: center;
     }
+
+    .cursive {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+@media only screen and (max-width: 530px) {
+    h4 {
+
+        text-align: center;
+        font-size: 60px;
+        border-bottom: 3px solid $color2;
+        margin: 60px auto 70px;
+        width: 900px;
+    }
+
+    table {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 36px;
+    }
+
+
+    .paiement_text {
+        font-size: 36px;
+        width: 70%;
+    }
+    .paiement_div {
+        font-size: 30px;
+
+    }
+}
 }

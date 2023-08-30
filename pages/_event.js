@@ -1,7 +1,7 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import EmblaCarousel2 from "../components/slider2";
-import EmblaCarousel3 from "../components/slider3";
+import Image from "next/image";
 
 const SLIDE_COUNT = 6;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
@@ -18,30 +18,47 @@ const Event = () => {
             <EmblaCarousel2 slides={slides} />
             <div className="brasero__textdiv">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not
+                La Taverne peut aussi venir jusqu'à vous, pour vos évènements
+                festifs :
+                <br /> Nous vous proposons une location du brasero seul ou avec
+                viandes et accompagnements, ou même une prestation complète
+                (formule traiteur et cuisine sur place)
+                <br /> Nous sommes à votre disposition pour plus de
+                renseignements
               </p>
-              <br/>
-              <p>Le prix est de 1000 dollars lol.</p>
+              <br />
             </div>
           </div>
           <h1>Privatisation</h1>
 
           <div className="privatisation__container">
-            <EmblaCarousel3 slides={slides} />
+            {/* <Image
+              src="/assets/salle1.jpg"
+              alt="Salle"
+              layout='intrinsic'
+              width={800}
+              height={600}
+              quality={100}
+              className="salle"
+            /> */}
+            <img
+              src="/assets/salle1.jpg"
+              alt="Salle"
+              width={630}
+              height={500}
+              className="salle"
+              // border="1px solid #4a1801"
+            />
+            {/* <EmblaCarousel3 slides={slides} /> */}
             <div className="privatisation__textdiv">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not
+                Vous pouvez également privatiser notre salle et bénéficier d'un
+                service complet.
+                <br />
+                <br /> Nous sommes à votre disposition pour plus de
+                renseignements.
               </p>
-              <br/>
-              <p>Le prix est de 1000 dollars lol.</p>
+              <br />
             </div>
           </div>
         </div>

@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 const Navbar = () => {
-  return (
-    <nav className="navbar">
+  return (  
+    <nav className="navbar" id="navbar">
       <div className="navbar__left">
         <div className="menu-circle">
           <div className="menu-btn">
@@ -11,7 +11,8 @@ const Navbar = () => {
         </div>
         <div className="socials">
           <a href="https://www.facebook.com/latavernetignieu" target="_blank">
-            <span className="icon-facebook"></span>
+            {/* <span class="icon-facebook"></span> */}
+            <i className="fab fa-facebook"></i>
           </a>
           <div>
             <a
@@ -51,7 +52,7 @@ const Navbar = () => {
             <li><a href="/">Accueil</a></li>
             <li><a href="/_menu">La carte</a></li>
             <li><a href="/_event">Prestations</a></li>
-            <li><a href="https://www.lataverne-tignieu.fr/#horaires">Horaires</a></li>
+            <li><a href="https://www.lataverne-tignieu.fr/#horaire">Horaires</a></li>
             <li><a href="https://www.lataverne-tignieu.fr/#mail">Contact</a></li>
             <li><a href="/_mentions">Mentions légales</a></li>
           </ul>

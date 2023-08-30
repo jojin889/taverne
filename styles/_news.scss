@@ -1,16 +1,16 @@
 #news {
-    padding-top: 30px;
-    height: 80vh;
+    padding-top: 70px;
+    // height: 78vh;
     // background-image: url("../public/assets/bg-desk.jpg");
     background: rgb(40,36,33);
     background: linear-gradient(129deg, rgba(40,36,33,1) 0%, rgba(45,41,38,1) 64%, rgba(54,48,42,1) 100%);
-
+    background: #1B1C1E;
 
     .present {
 
         h3 {
             border-bottom: 3px solid $color2;
-            margin: 0 auto;
+            margin: 30px auto;
             margin-bottom: 20px;
             text-align: center;
             min-width: 200px;
@@ -23,28 +23,26 @@
             width: 70%;
             font-family: 'Inknut Antiqua';
             margin: 0 auto;
-
         }
-        // border: 1px solid;
-        padding: 40px;
-        text-align: justify;
-        width: 80%;
-        margin: 0 auto;
-    }
-        h4 {
-            // font-style: italic;
+            // border: 1px solid;
+            padding: 40px;
             text-align: center;
-            font-size: 36px;
-            border-bottom: 2px solid $color2;
-            margin: -30px auto 40px;
-            width: 500px;
+            width: 80%;
+            margin: 0 auto;
         }
+}
+
+@media only screen and (max-width: 1300px) {
+    #news {
+        padding-top: 70px;
+        // height: 90vh;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
 
     #news {
-        height: 140vh;
+        // height: 130vh;
     .present {
 
         h3 {
@@ -58,12 +56,26 @@
             min-width: 100%;
             font-family: 'Inknut Antiqua';
             margin: 35px auto;
-
         }
 }
 }
 }
 
-@media only screen and (max-width: 768px) {
 
+@media only screen and (max-width: 575px) {
+    #news {
+
+            padding-top: 80px;
+    .present {
+        
+            h3 {
+                width: 100%;
+                font-size: 50px;
+            }
+            p {
+                width:100%;
+                font-size: 38px;
+            }
+        }
+    }
 }

@@ -1,7 +1,8 @@
 .mentions {
-    height: 120vh;
+    // height: 120vh;
 
     .mention__container {
+        padding-bottom: 230px;
 
         h1 {
             font-size: 55px;
@@ -11,24 +12,57 @@
 
         ul {
             display: flex;
+            padding-top: 50px;
             flex-direction: column;
-            margin-left: 38vh;
-            margin-top: 90px;
+            align-items: center;
 
             li {
                 list-style: none;
                 font-family: 'Inknut Antiqua';
-                margin: 5px;
-                width: 1200px;
+                width: fit-content;
                 display: flex;
                 flex-direction: row;
+                width: 65%;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between;
 
-                span {
-                    margin-left: 100px;
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 568px) {
+
+    .mentions {
+    
+        .mention__container {
+        padding-bottom: 190px;
+
+    
+            ul {
+                display: flex;
+                padding-top: 50px;
+                flex-direction: column;
+                align-items: center;
+    
+                li {
+                    list-style: none;
+                    font-family: 'Inknut Antiqua';
+                    width: fit-content;
+                    font-size: smaller;
+
+                    display: flex;
+                    flex-direction: row;
+                    width: 90%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:space-between;
+    
+    
                 }
             }
         }
     }
-
-
 }

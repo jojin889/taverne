@@ -1,0 +1,74 @@
+.styles_gridItem__nPXhF figure > div > img {
+    opacity: 0.8 !important;
+    transition-duration: 0.6s;
+
+}
+
+.styles_gridItem__nPXhF figure > div > img:hover {
+    opacity: 1 !important;
+    transform: scale(1.1);
+    transition-duration: 0.6s;
+}
+
+.styles_wrapper__1kG3C {
+    background: #121214 !important;
+    min-height: 0 !important;
+}
+
+.styles_gridItem__nPXhF figcaption {
+    display: none !important;
+}
+
+.gallery {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: #1D1717;
+    margin: "0 auto";
+}
+.__react_modal_image__header {
+    bottom: 0px !important;
+    top: auto !important;
+    height: fit-content + 20px;
+}
+.__react_modal_image__icon_menu a {
+    padding: 5px 5px 0px 5px;
+}
+
+.__react_modal_image__icon_menu {
+    float: none !important;
+}
+.__react_modal_image__icon_menu a svg {
+    width: 53px;
+    height: 61px;
+}
+
+.__react_modal_image__icon_menu a:last-child svg {
+    margin-left: 40px;
+    width: 60px;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .gallery {
+        min-height: 80vh !important;
+
+        .styles_wrapper__1kG3C {
+
+        }
+    }
+}
+
+
+@media only screen and (max-width: 764px) {
+    .gallery {
+        min-height: fit-content + 20vh !important;
+
+        .__react_modal_image__icon_menu a svg {
+                font-size: 40px !important;
+                width: 40px !important;
+            }
+        
+    }
+
+}

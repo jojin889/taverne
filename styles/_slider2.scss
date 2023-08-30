@@ -70,11 +70,12 @@
     top: 50%;
     transform: translateY(-50%);
     border: 0;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     justify-content: center;
     align-items: center;
     fill: $color2;
+    fill: rgb(37, 10, 10);
     padding: 0;
   }
   
@@ -89,10 +90,10 @@
   }
   
   .embla2__button--prev {
-    left: 27px;
+    left: -50px;
   }
   
   .embla2__button--next {
-    right: 27px;
+    right: -50px;
   }
   

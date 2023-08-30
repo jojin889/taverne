@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { PrevButton, NextButton } from "./EmblaCarouselButtons";
+import { PrevButton2, NextButton2 } from "./EmblaCarouselButtons2";
 import useEmblaCarousel from "embla-carousel-react";
 import media2 from "../public/assets/brasero3.jpg"
-import media1 from "../public/assets/fb/brasero.jpg";
+import media1 from "../public/assets/fb/braseroBadQuality.jpg";
 import media4 from "../public/assets/brasero3.jpg"
-import media3 from "../public/assets/fb/brasero.jpg";
+import media3 from "../public/assets/fb/braseroBadQuality.jpg";
 import media6 from "../public/assets/brasero3.jpg";
-import media5 from "../public/assets/fb/brasero.jpg";
+import media5 from "../public/assets/fb/braseroBadQuality.jpg";
+import Image from 'next/image';
 
 const EmblaCarousel2 = ({ slides }) => {
   const [viewportRef, embla] = useEmblaCarousel({ skipSnaps: false,loop: true, });
@@ -46,8 +47,8 @@ const media = [media1, media2, media3, media4, media5, media6];
           ))}
         </div>
       </div>
-      <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-      <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+     <PrevButton2 onClick={scrollPrev} enabled={prevBtnEnabled} />
+      <NextButton2 onClick={scrollNext} enabled={nextBtnEnabled} /> 
     </div>
   );
 };

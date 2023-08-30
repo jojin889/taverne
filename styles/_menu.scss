@@ -1,15 +1,36 @@
 .menu {
-    height:600vh;
-    
+    // min-height:625vh;
+    padding-bottom: 100px;
+    // background-image: url("../public/assets/photo4.jpg");
+    // background-size: cover;
+    background: rgb(40,36,33);
+    background: linear-gradient(129deg, rgba(40,36,33,1) 0%, rgba(62,36,35,0.9500175070028011) 40%, rgba(54,48,42,1) 100%);
+    // background-position: 35% 75%;;
 
+
+    // background: #5E2219;
+    // border-radius: 17px;
+    // border: 1px solid black;
+    // border: 1px solid black;
+    // border-radius: 20px;
+    // background: #303138
+    
     .menu__container2 {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
 
+        .menu__container2--sauce {
+            font-size: 15px;
+
+            li {
+                margin: 120px;
+            }
+        }
+
         li {
-            width: 700px;
+            width: 1060px;
             display: flex;
         }
         .menu__span {
@@ -24,22 +45,52 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+
     }
+
 
     
      .menu__title {
         padding: 30px 80px;
         margin-bottom: 45px;
         font-size: 50px;
-        -webkit-box-shadow: 3px 4px 10px 5px rgba(27,8,1,0.7); 
-        box-shadow: 3px 4px 10px 5px rgba(27,8,1,0.7);
+        -webkit-box-shadow: 5px 5px 15px 5px #371101; 
+        box-shadow: 5px 5px 15px 5px #220B01;
+        background-image: url("../public/assets/bois7.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+
+
      }
     
      .menu__categories {
-        width: 80%;
-
+            width: 75%;
+    
+    // background: #632a0f75;
         .menu__categorie {
+
+
+            font-size: 16px;
+
+            color:floralwhite;
+            text-shadow: 1px 1px 0px #000000;
             width: 100%;
+            border: 1px solid rgba(61, 23, 5, 0.603);
+            border-radius: 10px;
+            // background-image: linear-gradient(to bottom, #210d05, #27130b, #2e1910, #361e13, #3d2416, #3f2617, #422817, #442a18, #422917, #402716, #3f2615, #3d2514);
+            background-image: url("../public/assets/brown2.jpg");
+            background-size: cover;
+            
+            padding-bottom: 20px;
+
+            .details_viande--first {
+                font-size: 20px;
+            }
+            .details_viande--third {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
 
         }
 
@@ -53,6 +104,31 @@
             font-family: 'Inknut Antiqua';
 
         }
+
+        .menu__descriptif-petitTavernier {
+            font-size: 30px;
+        }
+        .menu__descriptif-petitTavernier-price {
+            font-size: 32px;
+        }
+
+        .menu__descriptif-FormuleJour {
+            font-size: 30px;
+        }
+        .menu__descriptif-FormuleJour-price {
+            font-size: 32px;
+        }
+        .menu__descriptif-FormuleJour-price2 {
+            font-size: 24px;
+        }
+
+        .menu__descriptif-MenuTaverne-price {
+            font-size: 36px;
+        }
+        .menu__descriptif-Apartager-price {
+            font-size: 30px;
+        }
+
 
         .italic__comment {
             font-size: 14px;
@@ -82,34 +158,148 @@
             }
 
             li {
-                list-style: disc;
                 margin: 0;
             }
         }
 
         li {
-            margin: 20px 0px;
+            margin: 20px -6px;
             font-family: 'Inknut Antiqua';
-
             list-style: none;
         }
      }
+     .menu__container2--sauce {
+        font-size: 15px;
+
+        li {
+            margin: 0px;
+        }
+    }
+
 }
 
 
 @media only screen and (max-width: 1024px) {
     #menu {
 
-        height:570vh;
+        // min-height:610vh;
 
         .menu__categories {
-            width: 96%;
+            width: 85%;
+
+            li {
+                text-align: initial;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #menu {
+
+        // min-height:650vh;
+
+        .menu__categories {
+            width: 85%;
         }
     }
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 750px) {
+    #menu {
+
+        // min-height:680vh;
+
+        .menu__categories {
+            width: 85%;
+        }
+    }
 
 }
 
+@media only screen and (max-width: 625px) {
+    #menu {
+
+        li {
+            width: 700px;
+        }
+
+        .menu__categories {
+            width: 85%;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 507px) {
+    #menu {
+        padding-bottom: 200px;
+
+
+        .menu__categories {
+            width: 85%;
+            font-size: 34px;
+            
+            li {
+                margin: 20px 20px;
+            }
+        }
+
+        .menu__categorie {
+            font-size: 28px;
+            p {
+            font-size: 28px;
+            span {
+            font-size: 35px;
+
+            }
+
+            }
+
+            .menu__span {
+                font-size: 40px;
+            }
+
+        }
+
+        .italic__comment {
+            font-size: 30px;
+        }
+
+        h3 {
+            
+            font-size: 50px;
+        }
+
+        .details_viande {
+            font-size: 34px;
+        }
+
+
+        .menu__descriptif-petitTavernier {
+            font-size: 30px;
+        }
+        .menu__descriptif-petitTavernier-price {
+            font-size: 32px;
+        }
+
+        .menu__descriptif-FormuleJour {
+            font-size: 40px !important;
+        }
+        .menu__descriptif-FormuleJour-price {
+            font-size: 50px;
+        }
+        .menu__descriptif-FormuleJour-price2 {
+            font-size: 24px;
+        }
+
+        .menu__descriptif-MenuTaverne-price {
+            font-size: 50px;
+        }
+        .menu__descriptif-Apartager-price {
+            font-size: 50px;
+        }
+
+}
+}
