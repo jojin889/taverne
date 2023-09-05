@@ -47,12 +47,10 @@
     height: 110px;
     border-bottom: 2px solid rgba(41,37,34,0.21);
     border-bottom: 2px solid $color2;
-
     justify-content: space-evenly;
     align-items: center;
     width:100%;
     color: #fff;
-    // height: 100px;
     position: fixed;
     background-color: #1C1C1A;
     z-index: 99;
@@ -62,6 +60,8 @@
         min-width: 512px;
 
     }
+
+    //moving underline nav links
 
     .navbar__right a::after {
         content: '';
@@ -74,7 +74,6 @@
 
     .navbar__right a:hover::after {
         width: 100%;
-        //transition: width .3s;
     }
 
 }

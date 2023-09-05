@@ -64,7 +64,7 @@ const Mail = () => {
         <button type="submit">Envoyer</button>
       </form>
 
-      <div className="cursive"><i class="far fa-envelope"></i> 
+      <div className="cursive"><i className="far fa-envelope"></i> 
         <span> &nbsp;latavernetignieu@gmail.com</span>
         <br />
         <br />

@@ -1,12 +1,11 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import EmblaCarousel2 from "../components/slider2";
-import Image from "next/image";
-
-const SLIDE_COUNT = 6;
-const slides = Array.from(Array(SLIDE_COUNT).keys());
 
 const Event = () => {
+  const SLIDE_COUNT = 6;
+  const slides = Array.from(Array(SLIDE_COUNT).keys());
+
   return (
     <>
       <Navbar />

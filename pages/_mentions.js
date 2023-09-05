@@ -1,8 +1,7 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
-const Mentions = (props) => {
-  console.log("props", props);
+const Mentions = () => {
 
   return (
     <>

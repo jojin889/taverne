@@ -1,9 +1,51 @@
 import Navbar from "../components/navbar";
-import Client from "../components/contentFul";
+import { groq } from "next-sanity";
 import Footer from "../components/footer";
+import { client } from "../sanity/lib/client";
+import React, { useState, useEffect } from "react";
 
-const Menu = (props) => {
-  console.log("props", props);
+export default function Menu() {
+  const [entrees, setEntrees] = useState(["1", "2"]);
+  const [viandes, setViandes] = useState(["1", "2"]);
+  const [desserts, setDesserts] = useState(["1", "2"]);
+  const [poissons, setPoissons] = useState(["1", "2"]);
+  const [sauces, setSauces] = useState(["1", "2"]);
+
+  async function getData() {
+    const queryEntrees = groq`
+    *[_type=='entree']
+  `;
+
+    const queryViandes = groq`
+    *[_type=='viande']
+    `;
+    const queryPoissons = groq`
+    *[_type=='poisson']
+    `;
+
+    const queryDesserts = groq`
+    *[_type=='dessert']
+    `;
+
+    const querySauces = groq`
+    *[_type=='sauce']
+    `;
+
+    const entrees = await client.fetch(queryEntrees);
+    setEntrees(entrees);
+    const viandes = await client.fetch(queryViandes);
+    setViandes(viandes);
+    const desserts = await client.fetch(queryDesserts);
+    setDesserts(desserts);
+    const poissons = await client.fetch(queryPoissons);
+    setPoissons(poissons);
+    const sauces = await client.fetch(querySauces);
+    setSauces(sauces);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -17,17 +59,14 @@ const Menu = (props) => {
 
             <div className="menu__categorie flex">
               <ul>
-                {props.entreeItems.map((entree) => (
+                {entrees.map((entree) => (
                   <div className="menu__container2">
-                    <li>- {entree.fields.entreeText}</li>
-                    <span className="menu__span">
-                      {entree.fields.entreePrice}
-                    </span>
+                    <li>- {entree.name}</li>
+                    <span className="menu__span">{entree.price} €</span>
                   </div>
                 ))}
               </ul>
             </div>
-
 
             <h3>Viande</h3>
 
@@ -36,23 +75,22 @@ const Menu = (props) => {
                 Race : KOD jersey (Danemark)
               </p>
               <p className="details_viande">
-                <ul>
+                {/* <ul>
                   <li>- Faux filet de bœuf - 10.50€ / 100gr</li>
                   <li>- Entrecôte de bœuf - 10.50€ / 100gr</li>
                   <li>- Côte de bœuf - 10.50€ / 100gr</li>
-                </ul>
+                </ul> */}
               </p>
               <p className="details_viande--third">
-                (Les différents poids des pièces disponibles vous seront communiqués lors de
-                votre commande et le prix sera calculé en fonction de votre choix du poids.)
+                (Les différents poids des pièces disponibles vous seront
+                communiqués lors de votre commande et le prix sera calculé en
+                fonction de votre choix du poids.)
               </p>
               <ul>
-                {props.viandeItems.map((viande) => (
+                {viandes.map((viande) => (
                   <div className="menu__container2">
-                    <li> - {viande.fields.viandeText}</li>{" "}
-                    <span className="menu__span">
-                      {viande.fields.viandePrice}
-                    </span>
+                    <li> - {viande.name}</li>{" "}
+                    <span className="menu__span">{viande.price} €</span>
                   </div>
                 ))}
               </ul>
@@ -60,32 +98,34 @@ const Menu = (props) => {
                 Toutes nos sauces sont faites maison :
               </p>
               <ul>
-                {props.sauceItems.map((sauce) => (
+                {sauces.map((sauce) => (
                   <div className="menu__container2--sauce">
-                    <li> - {sauce.fields.sauceText}</li>
+                    <li> - {sauce.name}</li>
                   </div>
                 ))}
               </ul>
               <p className="italic__comment">
-                <i className="fas fa-arrow-right"></i> Nos plats sont accompagnés de mille feuilles de pommes de terre et de légumes frais rôtis
+                <i className="fas fa-arrow-right"></i> Nos plats sont
+                accompagnés de mille feuilles de pommes de terre et de légumes
+                frais rôtis
               </p>
             </div>
             <h3>Poissons</h3>
 
             <div className="menu__categorie">
               <ul>
-                {props.poissonItems.map((poisson) => (
+                {poissons.map((poisson) => (
                   <div className="menu__container2">
-                    <li>- {poisson.fields.poissonText}</li>{" "}
-                    <span className="menu__span">
-                      {poisson.fields.poissonPrice}
-                    </span>
+                    <li>- {poisson.name}</li>{" "}
+                    <span className="menu__span">{poisson.price} €</span>
                   </div>
                 ))}
               </ul>
 
               <p className="italic__comment">
-                <i className="fas fa-arrow-right"></i> Nos plats sont accompagnés de mille feuilles de pommes de terre et de légumes frais rôtis
+                <i className="fas fa-arrow-right"></i> Nos plats sont
+                accompagnés de mille feuilles de pommes de terre et de légumes
+                frais rôtis
               </p>
             </div>
 
@@ -93,18 +133,14 @@ const Menu = (props) => {
 
             <div className="menu__categorie">
               <ul>
-                {props.dessertItems.map((dessert) => (
+                {desserts.map((dessert) => (
                   <div className="menu__container2">
-                    <li>- {dessert.fields.dessertText}</li>{" "}
-                    <span className="menu__span">
-                      {dessert.fields.dessertPrice}
-                    </span>
+                    <li>- {dessert.name}</li>{" "}
+                    <span className="menu__span">{dessert.price} €</span>
                   </div>
                 ))}
               </ul>
             </div>
-
-
 
             <br />
             <p>
@@ -122,8 +158,8 @@ const Menu = (props) => {
                 </span>
               </p>
               <p>
-                Steak haché Angus, pommes de terre rissolées, <br />
-                1 Boule de glace vanille avec chantilly – Sirop au choix{" "}
+                Steak haché Angus, pommes de terre rissolées, <br />1 Boule de
+                glace vanille avec chantilly – Sirop au choix{" "}
               </p>
             </div>
             <br />
@@ -131,19 +167,25 @@ const Menu = (props) => {
             <h3>Formule du jour</h3>
 
             <div className="menu__categorie">
-              <span className="menu__descriptif-FormuleJour-price">15,50 €</span>
+              <span className="menu__descriptif-FormuleJour-price">
+                15,50 €
+              </span>
               <p className="menu__descriptif-FormuleJour">
                 Plat du jour, dessert du jour et café
               </p>
-              <p className="menu__descriptif-FormuleJour-price2">(Ou Plat du jour &nbsp;11,50€)</p>
+              <p className="menu__descriptif-FormuleJour-price2">
+                (Ou Plat du jour &nbsp;11,50€)
+              </p>
             </div>
             <h3>Menu "La Taverne"</h3>
 
             <div className="menu__categorie">
-              <span className="menu__descriptif-MenuTaverne-price">38,00 €</span>
+              <span className="menu__descriptif-MenuTaverne-price">
+                38,00 €
+              </span>
               {/* <span style={{ fontSize: "24px" }}>40,00 €</span> */}
               <h2>Entrées</h2>
-              <p>{props.menuEntrée1[0].fields.menuEntre1}</p>
+              {/* <p>{props.menuEntrée1[0].fields.menuEntre1}</p>
               <p>OU</p>
               <p>
                 {props.menuEntrée2[0].fields.menuEntre2}
@@ -155,7 +197,7 @@ const Menu = (props) => {
               <p>OU</p>
               <p>{props.menuPlat2[0].fields.menuPlat2}</p>
               <p>OU</p>
-              <p>{props.menuPlat3[0].fields.menuPlat3}</p>
+              <p>{props.menuPlat3[0].fields.menuPlat3}</p> */}
               <h2>Desserts</h2>
               <p>Au choix à la carte</p>
               {/* <p>{props.menuDessert1[0].fields.menuDessert1}</p>
@@ -173,93 +215,15 @@ const Menu = (props) => {
               <p>(Selon arrivage)</p>
               <p>A partir de 6 personnes !</p>
               <h2>-Planche de viandes à partager</h2>
-              <p>
-                Environ 350gr de viande/personne
-              </p>
+              <p>Environ 350gr de viande/personne</p>
               <p>(Détail à la voix)</p>
               <p>+ Accompagnements</p>
-              <p>(Formule imposée pour
-les tables de 8 personnes et plus)</p>
+              <p>(Formule imposée pour les tables de 8 personnes et plus)</p>
             </div>
           </div>
         </div>
-
       </div>
       <Footer />
     </>
   );
-};
-
-export default Menu;
-
-export async function getStaticProps() {
-  const entreeData = await Client.getEntries({
-    content_type: "entres",
-  });
-  const sauceData = await Client.getEntries({
-    content_type: "sauces",
-  });
-  const poissonData = await Client.getEntries({
-    content_type: "poisson",
-  });
-  const viandeData = await Client.getEntries({
-    content_type: "viande",
-  });
-  const dessertData = await Client.getEntries({
-    content_type: "desserts",
-  });
-
-
-  const MenuEntrée1 = await Client.getEntries({
-    content_type: "menuEntre1",
-  });
-  const MenuEntrée2 = await Client.getEntries({
-    content_type: "menuEntre2",
-  });
-  const MenuEntrée3 = await Client.getEntries({
-    content_type: "menuEntre3",
-  });
-
-  const MenuPlat1 = await Client.getEntries({
-    content_type: "menuPlat1",
-  });
-  const MenuPlat2 = await Client.getEntries({
-    content_type: "menuPlat2",
-  });
-  const MenuPlat3 = await Client.getEntries({
-    content_type: "menuPlat3",
-  });
-
-
-  const MenuDessert1 = await Client.getEntries({
-    content_type: "menuDessert1",
-  });
-  const MenuDessert2 = await Client.getEntries({
-    content_type: "menuDessert2",
-  });
-  const MenuDessert3 = await Client.getEntries({
-    content_type: "menuDessert3",
-  })
-
-
-
-  return {
-    props: {
-      entreeItems: entreeData.items,
-      poissonItems: poissonData.items,
-      viandeItems: viandeData.items,
-      sauceItems: sauceData.items,
-      dessertItems: dessertData.items,
-      menuEntrée1: MenuEntrée1.items,
-      menuEntrée2: MenuEntrée2.items,
-      menuEntrée3: MenuEntrée3.items,
-      menuPlat1: MenuPlat1.items,
-      menuPlat2: MenuPlat2.items,
-      menuPlat3: MenuPlat3.items,
-      menuDessert1: MenuDessert1.items,
-      menuDessert2: MenuDessert2.items,
-      menuDessert3: MenuDessert3.items,
-
-    },
-  };
 }

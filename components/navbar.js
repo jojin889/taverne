@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 const Navbar = () => {
   return (  
@@ -11,7 +10,6 @@ const Navbar = () => {
         </div>
         <div className="socials">
           <a href="https://www.facebook.com/latavernetignieu" target="_blank">
-            {/* <span class="icon-facebook"></span> */}
             <i className="fab fa-facebook"></i>
           </a>
           <div>

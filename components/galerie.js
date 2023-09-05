@@ -14,7 +14,7 @@ const Gallery = (props) => {
   return (
     <div
       className="gallery">
-      <DztImageGalleryComponent images={data} hideZoom="true" hideRotate="true" hideDownload="true" width='100px' height='100px'  />
+      <DztImageGalleryComponent images={data} hideZoom={true} hideRotate={true} hideDownload={true} width='100px' height='100px'  />
     </div>
   );
 };

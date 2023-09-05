@@ -12,25 +12,30 @@
     "@portabletext/react": "^3.0.7",
     "@sanity/client": "^6.4.9",
     "@sanity/image-url": "^1.0.2",
-    "@sanity/vision": "^3.16.0",
+    "@sanity/vision": "^3.16.2",
+    "autoprefixer": "10.4.15",
     "contentful": "^9.1.4",
     "embla-carousel-react": "^6.0.1",
-    "next": "^11.1.2",
+    "next": "^12.3.4",
     "next-sanity": "^5.4.6",
     "next-sass": "^1.0.3",
     "nextjs-fonts": "^0.22.0",
     "node-sass": "^4.14.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-scripts": "4.0.3",
     "reactjs-image-gallery": "^1.1.7",
-    "sanity": "^3.16.0",
+    "sanity": "^3.16.2",
+    "sanity-plugin-iframe-pane": "^2.1.1",
+    "sanity-plugin-vercel-deploy": "^3.3.4",
     "sass": "^1.43.4",
     "sparkpost": "^2.1.4",
     "styled-components": "5.2"
   },
   "devDependencies": {
+    "@sanity/eslint-config-studio": "^2.0.1",
     "eslint": "7.30.0",
-    "eslint-config-next": "11.0.1"
+    "eslint-config-next": "11.0.1",
+    "react-dom": "^18.2.0"
   }
 }

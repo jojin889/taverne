@@ -3,16 +3,22 @@ import "../styles/styles.scss";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <div id="loading">
+      {/* <div id="loading">
         <div className="lds_ellipsis">
           <div>.</div>
           <div>.</div>
           <div>.</div>
         </div>
+      </div> */}
+
+      <div id="loading">
+        <div id="page-loader">
+          <div className="spinner"></div>
+        </div>
       </div>
       <div>
         <div id="loloading">
-      <Component {...pageProps}  />
+          <Component {...pageProps} />
         </div>
       </div>
     </>

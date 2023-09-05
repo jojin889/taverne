@@ -10,7 +10,7 @@ import Client from "../components/contentFul";
 
 
 const Home = (props) => {
-  console.log('props from index', props)
+  // console.log('props from index', props)
   const GalleryImages = props.galleryImages;
   const eventImages = props.eventImages;
   
