@@ -52,7 +52,6 @@ const Navbar = () => {
             <li><a href="/_event">Prestations</a></li>
             <li><a href="https://www.lataverne-tignieu.fr/#horaire">Horaires</a></li>
             <li><a href="https://www.lataverne-tignieu.fr/#mail">Contact</a></li>
-            <li><a href="/_mentions">Mentions légales</a></li>
           </ul>
 
         </div>

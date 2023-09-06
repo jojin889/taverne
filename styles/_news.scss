@@ -7,35 +7,48 @@
     background: #1B1C1E;
 
     .present {
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        padding-top: 60px;
+        text-align: center;
+        margin: 0 auto;
 
         h3 {
             border-bottom: 3px solid $color2;
             margin: 30px auto;
-            margin-bottom: 20px;
-            text-align: center;
-            min-width: 200px;
-            width: 250px;
-            font-size: 17px;
+            margin-bottom: 40px;
+            width: 70%;
+            font-size: 22px;
         }
 
         p {
             font-size: 16px;
-            width: 70%;
             font-family: 'Inknut Antiqua';
             margin: 0 auto;
+            width:80%;
         }
-            // border: 1px solid;
-            padding: 40px;
-            text-align: center;
-            width: 80%;
-            margin: 0 auto;
+
+        img {
+            border-radius: 15px;
+            width: 70%;
         }
+
+        .opacity-filter {
+            opacity: 0.85;
+        }
+            
+    }
 }
 
 @media only screen and (max-width: 1300px) {
     #news {
         padding-top: 70px;
         // height: 90vh;
+    }
+    .present {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
     }
 }
 
@@ -47,13 +60,12 @@
 
         h3 {
             width: 60%;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
         }
 
         p {
             font-size: 16px;
-            width:100%;
-            min-width: 100%;
+            width: 85%;
             font-family: 'Inknut Antiqua';
             margin: 35px auto;
         }
@@ -61,19 +73,43 @@
 }
 }
 
+@media only screen and (max-width: 800px) {
+    #news {
+        padding-top: 80px;
+        
+    .present {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
+        
+            h3 {
+                font-size: 32px;
+            }
+            p {
+                width: 85%;
+                font-size: 26px;
+            }
+        }
+    }
+}
+
 
 @media only screen and (max-width: 575px) {
     #news {
-
-            padding-top: 80px;
+        padding-top: 80px;
+        
     .present {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
         
             h3 {
-                width: 100%;
+                width: 70%;
                 font-size: 50px;
+                margin-bottom: 55px;
             }
             p {
-                width:100%;
+                width: 85%;
                 font-size: 38px;
             }
         }

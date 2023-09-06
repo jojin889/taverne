@@ -8,7 +8,7 @@ const Utilities = () => {
             <i className="fas fa-parking"></i>
             </div>
             <div className="utilities__text">
-            Parking gratuit et à proximité du restaurant
+            Parking gratuit devant le restaurant
             </div>
           </div>
 
@@ -25,7 +25,7 @@ const Utilities = () => {
             <div className="utilities__logo_div">
             <i className="fas fa-umbrella-beach"></i>
             </div>
-            <div className="utilities__text">Terrasse ombragée</div>
+            <div className="utilities__text">Terrasse ombragée pour votre confort</div>
           </div>
         </div>
       </div>

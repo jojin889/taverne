@@ -37,8 +37,8 @@ const Horaire = () => {
       </table>
 
       <p>
-        Nous vous conseillons de réserver au &nbsp;: &nbsp;
-        <span className="cursive"> 06 49 79 69 74</span>{" "}
+        Nous vous conseillons de réserver au : <br></br>
+        <span className="cursive"> 06 49 79 69 74</span>
       </p>
 
       <p className="paiement_text">Moyens de paiement disponibles :</p>

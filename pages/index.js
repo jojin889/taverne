@@ -20,9 +20,8 @@ const Home = (props) => {
       <Navbar />
       <Hero />
       <News />
-      <Evenements img={eventImages} />
+      {/* <Evenements img={eventImages} /> */}
       <Horaire />
-
       <Gallery img={GalleryImages} />
       <Mail />
       <Footer />
