@@ -63,7 +63,7 @@ export default function Gallery() {
 
   return (
     <div className="gallery">
-      <DztImageGalleryComponent
+      {/* <DztImageGalleryComponent
         lazyLoad={true}
         images={images}
         hideZoom={true}
@@ -71,7 +71,7 @@ export default function Gallery() {
         hideDownload={true}
         width="100px"
         height="100px"
-      />
+      /> */}
     </div>
   );
 }
