@@ -1,6 +1,7 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import EmblaCarousel2 from "../components/slider2";
+import Image from "next/image";
 
 const Event = () => {
   const SLIDE_COUNT = 6;
@@ -31,24 +32,14 @@ const Event = () => {
           <h1>Privatisation</h1>
 
           <div className="privatisation__container">
-            {/* <Image
-              src="/assets/salle1.jpg"
-              alt="Salle"
-              layout='intrinsic'
-              width={800}
-              height={600}
-              quality={100}
-              className="salle"
-            /> */}
-            <img
+
+            <Image
               src="/assets/fb/salle.jpg"
               alt="Salle"
-              width={630}
-              height={500}
+              width={730}
+              height={600}
               className="salle"
-              // border="1px solid #4a1801"
             />
-            {/* <EmblaCarousel3 slides={slides} /> */}
             <div className="privatisation__textdiv">
               <p>
                 Vous pouvez également privatiser notre salle et bénéficier d'un

@@ -40,8 +40,6 @@ const EmblaCarousel1 = ({ slides, img }) => {
                 <div className="embla__slide__inner">
                   <img
                     className="embla__slide__img"
-                    // src={`https:${media[index].fields.eventImage.file.url}`}
-                    // src={media[index].src}
                     src={`https:${img.img[index].fields.eventImage.fields.file.url}`}
                     alt="An event"
 

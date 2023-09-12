@@ -1,6 +1,7 @@
+import Image from "next/image";
 
 const Navbar = () => {
-  return (  
+  return (
     <nav className="navbar" id="navbar">
       <div className="navbar__left">
         <div className="menu-circle">
@@ -24,6 +25,7 @@ const Navbar = () => {
       </div>
       <div className="div__logo_shield">
         <img
+
           className="logo_shield inactive"
           src="/assets/logo_shield7.png"
         ></img>
@@ -47,13 +49,22 @@ const Navbar = () => {
       <div className="burger__overlay">
         <div className="burger">
           <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/_menu">La carte</a></li>
-            <li><a href="/_event">Prestations</a></li>
-            <li><a href="https://www.lataverne-tignieu.fr/#horaire">Horaires</a></li>
-            <li><a href="https://www.lataverne-tignieu.fr/#mail">Contact</a></li>
+            <li>
+              <a href="/">Accueil</a>
+            </li>
+            <li>
+              <a href="/_menu">La carte</a>
+            </li>
+            <li>
+              <a href="/_event">Prestations</a>
+            </li>
+            <li>
+              <a href="https://www.lataverne-tignieu.fr/#horaire">Horaires</a>
+            </li>
+            <li>
+              <a href="https://www.lataverne-tignieu.fr/#mail">Contact</a>
+            </li>
           </ul>
-
         </div>
       </div>
     </nav>

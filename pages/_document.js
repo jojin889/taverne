@@ -12,16 +12,16 @@ class MyDocument extends Document {
         <Head>
           <link rel="stylesheet" href="/fonts/style.css" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          {/* <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" /> */}
           <link
             href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap"
             rel="stylesheet"
           />
-          <link
+          {/* <link
             href="https://mozilla.github.io/foundation-icons/assets/foundation-icons.css"
             type="text/css"
             rel="stylesheet"
-          />
+          /> */}
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -29,19 +29,13 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
             referrerPolicy="no-referrer"
           />
-          <link
-            href="http://mozilla.github.io/foundation-icons/assets/foundation-icons.css"
-            type="text/css"
-            rel="stylesheet"
-          />{" "}
-    {/* <title>La Taverne</title> */}
 
         </Head>
         <body>
           <Main />
           <NextScript />
           <script src="/index.js"></script>
-          <script src="https://use.fontawesome.com/a6aee08d63.js"></script>
+          {/* <script src="https://use.fontawesome.com/a6aee08d63.js"></script> */}
         </body>
       </Html>
     );
