@@ -29,7 +29,11 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
             referrerPolicy="no-referrer"
           />
-
+          <title>La Taverne</title>
+          <meta
+            name="La Taverne"
+            content="Restaurant de viande et pub à Tignieu-Jameyzieu"
+          />
         </Head>
         <body>
           <Main />
