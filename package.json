@@ -23,6 +23,7 @@
     "node-sass": "^7.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "framer-motion": "^10.12.16",
     "react-scripts": "4.0.3",
     "reactjs-image-gallery": "^1.1.7",
     "sanity": "^3.16.2",
