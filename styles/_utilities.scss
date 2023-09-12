@@ -40,14 +40,11 @@
 
         .utilities__container {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            
-            
             
             .utilities__div {
                 margin: 18px 10px;
-
             }
         }
         

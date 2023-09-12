@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Utilities from "./utilities";
 
 const News = () => {
@@ -32,11 +33,16 @@ const News = () => {
           </p>
         </div>
         <div>
-          <img src="/assets/assetMeat7.jpg" alt="meat picture" className="opacity-filter" />
+          <Image
+            width={400}
+            height={600}
+            src="/assets/assetMeat7-min.webp"
+            alt="meat picture"
+            className="opacity-filter"
+          />
         </div>
       </div>
       <Utilities />
-
     </div>
   );
 };

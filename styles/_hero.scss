@@ -1,7 +1,6 @@
 .hero {
     // background-image: url("../public/assets/meatNew.jpg");
-    background-image: url("../public/assets/assetMeat8.jpeg");
-    
+    background-image: url("../public/assets/assetMeat8-min.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 10% 80%;
@@ -23,7 +22,7 @@
             padding: 30px 86px;
             // -webkit-box-shadow: 5px 5px 15px 5px #371101; 
             // box-shadow: 5px 5px 15px 5px #220B01;
-            // background-image: url("../public/assets/bois7.jpg"), url("../public/assets/bois7BadQuality.jpg");
+            // background-image: url("../public/assets/bois7BadQuality.jpg"), url("../public/assets/bois7BadQuality.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             border-radius: 10px;
@@ -69,25 +68,31 @@ h5 {
     .hero {
         // background-image: url("../public/assets/viande.jpg"),url("../public/assets/viande3.jpg"),;
         // background-image: url("../public/assets/photo8.jpg");
-        background-image: url("../public/assets/meatNew.jpg");
-        background-size:cover;
+        background-image: url("../public/assets/assetMeat8-min.webp");
+        background-size: cover;
         background-repeat: no-repeat;
+        background-position: 40%;
+        height: 150vh;
 
         .hero-title-div {
 
             h1 {
-                font-size: 65px;
+                font-size: 95px;
                 letter-spacing: 4px;
                 text-shadow: black 0.1em 0.1em 0.2em;
                 border: 2px solid white;
                 padding: 30px 86px;
-                -webkit-box-shadow: 3px 4px 10px 5px rgba(27,8,1,0.7); 
-                box-shadow: 3px 4px 10px 5px rgba(27,8,1,0.7);
+                -webkit-box-shadow: 0px 20px 10px 0px rgba(27,8,1,0.7); 
+                box-shadow: 0px 20px 10px 0px rgba(27,8,1,0.7);
                 border-radius: 15px;
                 border: none;
-                // -webkit-box-shadow: none; 
-                // box-shadow: none;
+            }
 
+            h3 {
+                font-size: 40px;
+            }
+            h5 {
+                font-size: 30px;
             }
         }
     }
@@ -97,10 +102,11 @@ h5 {
     .hero {
         height: 180vh;
         // background-image: url("../public/assets/viande.jpg"),url("../public/assets/viande3.jpg"),;
-        background-image: url("../public/assets/meatNew.jpg");
+        background-image: url("../public/assets/assetMeat8-min.webp");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 70%;
+        background-position: 10% 80%;
+        height:100vh;
 
         .hero-title-div {
 
@@ -133,13 +139,13 @@ h5 {
 }
 @media only screen and (max-width: 500px) {
     .hero {
-        height: 233vh;
         // background-image: url("../public/assets/viande.jpg"),url("../public/assets/viande3.jpg"),;
-        background-image: url("../public/assets/meatNew.jpg");
-        background-size: 290%;
+        background-image: url("../public/assets/assetMeat8-min.webp");
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: 50% 10%;
-        // background-position: 25% 90%;
+        background-position: 39%;
+        height: 240vh;
+
 
 
         .hero-title-div {

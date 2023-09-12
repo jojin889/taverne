@@ -23,7 +23,7 @@ const Event = () => {
                 viandes et accompagnements, ou même une prestation complète
                 (formule traiteur et cuisine sur place)
                 <br /> Nous sommes à votre disposition pour plus de
-                renseignements
+                renseignements.
               </p>
               <br />
             </div>
@@ -41,7 +41,7 @@ const Event = () => {
               className="salle"
             /> */}
             <img
-              src="/assets/salle1.jpg"
+              src="/assets/fb/salle.jpg"
               alt="Salle"
               width={630}
               height={500}

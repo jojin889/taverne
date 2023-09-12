@@ -1,11 +1,13 @@
 #event {
 
+
     .event__container {
         
-        background-image: url("../public/assets/cook7.jpg");
+        background-image: url("../public/assets/assetMeat15-min.webp");
         background-size: cover;
-        background-position: 35% 75%;
+        background-position: 35% 100%;
         padding-bottom: 100px;
+
 
         .salle {
             border: 1px solid $color2 !important;
@@ -23,7 +25,7 @@
             font-size: 50px;
             -webkit-box-shadow: 5px 5px 15px 5px #371101; 
             box-shadow: 5px 5px 15px 5px #220B01;
-            background-image: url("../public/assets/bois7.jpg");
+            background-image: url("../public/assets/bois7BadQuality.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             border-radius: 10px;
