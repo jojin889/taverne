@@ -60,6 +60,7 @@
 
 @media only screen and (max-width: 764px) {
     .gallery {
+        display: none;
 
         .__react_modal_image__icon_menu a svg {
                 font-size: 40px !important;

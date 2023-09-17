@@ -1,34 +1,3 @@
-// import DztImageGalleryComponent from "reactjs-image-gallery";
-
-// const Gallery = (props) => {
-
-//   var data = [];
-
-//   for (var i = 0; i < props.img.length; i++) {
-//     data.push({
-//       url: `https:${props.img[i].fields.galleryImage.fields.file.url}`,
-//       thumbUrl: `https:${props.img[i].fields.galleryImage.fields.file.url}`,
-//     });
-//   }
-
-//   // for (var i = 0; i < props.img.length; i++) {
-//   //   data.push({
-//   //     url: `https:${props.img[i].fields.galleryImage.fields.file.url}`,
-//   //     thumbUrl: `https:${props.img[i].fields.galleryImage.fields.file.url}`,
-//   //   });
-//   // }
-//   console.log(data);
-
-//   return (
-//     <div
-//       className="gallery">
-//       <DztImageGalleryComponent images={data} hideZoom={true} hideRotate={true} hideDownload={true} width='100px' height='100px'  />
-//     </div>
-//   );
-// };
-
-// export default Gallery;
-
 import { useEffect, useState } from "react";
 import DztImageGalleryComponent from "reactjs-image-gallery";
 import { groq } from "next-sanity";

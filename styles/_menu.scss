@@ -79,7 +79,7 @@
             border: 1px solid rgba(61, 23, 5, 0.603);
             border-radius: 10px;
             // background-image: linear-gradient(to bottom, #210d05, #27130b, #2e1910, #361e13, #3d2416, #3f2617, #422817, #442a18, #422917, #402716, #3f2615, #3d2514);
-            background-image: url("../public/assets/brown2.jpg");
+            background-image: url("../public/assets/bois7BadQualityDarker.jpg");
             background-size: cover;
             
             padding-bottom: 20px;
@@ -197,8 +197,6 @@
 @media only screen and (max-width: 800px) {
     #menu {
 
-        // min-height:650vh;
-
         .menu__categories {
             width: 85%;
         }
@@ -208,8 +206,6 @@
 
 @media only screen and (max-width: 750px) {
     #menu {
-
-        // min-height:680vh;
 
         .menu__categories {
             width: 85%;
@@ -242,7 +238,7 @@
             font-size: 34px;
             
             li {
-                margin: 20px 20px;
+                margin: 25px 35px 20px 0px;
             }
         }
 
@@ -257,8 +253,15 @@
 
             }
 
+            .menu__container2--sauce {
+                font-size: 25px;
+            }
+
             .menu__span {
-                font-size: 40px;
+                font-size: 35px;
+                display: flex;
+                align-self: self-start;
+                justify-content: center;
             }
 
         }

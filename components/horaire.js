@@ -48,7 +48,7 @@ const Horaire = () => {
           <i className="fas fa-credit-card"></i>
         </div>
         <div className="paiement_div">
-          Ticket restaurant
+          Carte restaurant
           <i className="fas fa-money-check-alt"></i>
         </div>
         <div className="paiement_div">

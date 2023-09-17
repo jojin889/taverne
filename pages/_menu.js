@@ -10,6 +10,8 @@ export default function Menu() {
   const [desserts, setDesserts] = useState(["1", "2"]);
   const [poissons, setPoissons] = useState(["1", "2"]);
   const [sauces, setSauces] = useState(["1", "2"]);
+  const [menuDuJour, setMenuDuJour] = useState(["1", "2"]);
+  const [menuTaverne, setMenuTaverne] = useState(["1", "2"]);
 
   async function getData() {
     const queryEntrees = groq`
@@ -31,6 +33,13 @@ export default function Menu() {
     *[_type=='sauce']
     `;
 
+    const queryMenuTaverne = groq`
+    *[_type=='menuTaverne']
+    `;
+
+    const queryMenuDuJour = groq`
+    *[_type=='menuDuJour']
+    `;
     const entrees = await client.fetch(queryEntrees);
     setEntrees(entrees);
     const viandes = await client.fetch(queryViandes);
@@ -41,6 +50,12 @@ export default function Menu() {
     setPoissons(poissons);
     const sauces = await client.fetch(querySauces);
     setSauces(sauces);
+    const menuTaverne = await client.fetch(queryMenuTaverne);
+    setMenuTaverne(menuTaverne);
+    const menuDuJour = await client.fetch(queryMenuDuJour);
+    setMenuDuJour(menuDuJour);
+
+    console.log(menuTaverne)
   }
 
   useEffect(() => {
@@ -68,7 +83,7 @@ export default function Menu() {
               </ul>
             </div>
 
-            <h3>Viande</h3>
+            <h3>Viandes</h3>
 
             <div className="menu__categorie flex">
               <p className="details_viande--first">
@@ -159,7 +174,7 @@ export default function Menu() {
               </p>
               <p>
                 Steak haché Angus, pommes de terre rissolées, <br />1 Boule de
-                glace vanille avec chantilly – Sirop au choix{" "}
+                glace – Sirop au choix{" "}
               </p>
             </div>
             <br />
@@ -168,36 +183,36 @@ export default function Menu() {
 
             <div className="menu__categorie">
               <span className="menu__descriptif-FormuleJour-price">
-                15,50 €
+                {menuDuJour[0].fullMenuPrice} €
               </span>
               <p className="menu__descriptif-FormuleJour">
                 Plat du jour, dessert du jour et café
               </p>
               <p className="menu__descriptif-FormuleJour-price2">
-                (Ou Plat du jour &nbsp;11,50€)
+                (Ou Plat du jour &nbsp;{menuDuJour[0].platDuJourPrice} €)
               </p>
             </div>
             <h3>Menu "La Taverne"</h3>
 
             <div className="menu__categorie">
               <span className="menu__descriptif-MenuTaverne-price">
-                38,00 €
+                {menuTaverne[0].prix} €
               </span>
               {/* <span style={{ fontSize: "24px" }}>40,00 €</span> */}
               <h2>Entrées</h2>
-              {/* <p>{props.menuEntrée1[0].fields.menuEntre1}</p>
+              <p>{menuTaverne[0].entree1}</p>
               <p>OU</p>
               <p>
-                {props.menuEntrée2[0].fields.menuEntre2}
+                {menuTaverne[0].entree2}
               </p>
-              <p>OU</p>
-              <p>{props.menuEntrée3[0].fields.menuEntre3}</p>
+              <p>{(menuTaverne[0].entree3 ? "OU" : "")}</p>
+              <p>{menuTaverne[0].entree3}</p>
               <h2>Plats</h2>
-              <p>{props.menuPlat1[0].fields.menuPlat1}</p>
+              <p>{menuTaverne[0].plat1}</p>
               <p>OU</p>
-              <p>{props.menuPlat2[0].fields.menuPlat2}</p>
-              <p>OU</p>
-              <p>{props.menuPlat3[0].fields.menuPlat3}</p> */}
+              <p>{menuTaverne[0].plat2}</p>
+              <p>{(menuTaverne[0].plat3 ? "OU" : "")}</p>
+              <p>{menuTaverne[0].plat3}</p>
               <h2>Desserts</h2>
               <p>Au choix à la carte</p>
               {/* <p>{props.menuDessert1[0].fields.menuDessert1}</p>
