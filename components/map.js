@@ -9,6 +9,7 @@ const Map = () => {
         allowFullScreen=""
         loading="lazy"
         className="map"
+        title="Map to find the restaurant"
       ></iframe>
     </div>
   );

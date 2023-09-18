@@ -38,7 +38,7 @@
             text-align: center;  
          }
          
-         ::-moz-placeholder {  /* Firefox 19+ */
+         ::-moz-placeholder {
             text-align: center;  
          }
          
@@ -74,7 +74,6 @@
 
         input::placeholder {
             margin: 10px;
-            // font-family: Aniron;
             font-family: 'Inknut Antiqua';
             font-size: 14px;
             text-align: center;
@@ -83,7 +82,6 @@
         input:focus::placeholder {
             color: transparent;
         }
-
 
         .contact_mail__flex {
             display: flex;
@@ -136,7 +134,7 @@
 
         input {
             margin: 10px 10px;
-            width: 490px;
+            width: 46%;
             font-size: 24px;
         }
         .contact_mail__flex {

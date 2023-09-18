@@ -13,7 +13,8 @@ const Home = () => {
       <Hero />
       <News />
       <Horaire />
-      <Gallery />
+      {/* <Gallery /> */}
+      {/* REMETTRE LE CLIQUE SUR LA GALLERIE DANS LE JS SI TU REMETS LA GALLERIE */}
       <Mail />
       <Footer />
     </>

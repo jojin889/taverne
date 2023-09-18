@@ -88,7 +88,7 @@ window.onload = function () {
     const hero__container = document.querySelector(".hero");
     const news__container = document.querySelector(".news");
     const horaire__container = document.querySelector(".horaire");
-    const galery__container = document.querySelector(".gallery");
+    // const galery__container = document.querySelector(".gallery");
     const mail__container = document.querySelector(".mail");
 
     hero__container.addEventListener("click", () => {
@@ -118,15 +118,15 @@ window.onload = function () {
         burgerOverlay.classList.remove("showBurger");
       }
     });
-    galery__container.addEventListener("click", () => {
-      if (menuOpen) {
-        menuBtn.classList.remove("open");
-        menuOpen = false;
+    // galery__container.addEventListener("click", () => {
+    //   if (menuOpen) {
+    //     menuBtn.classList.remove("open");
+    //     menuOpen = false;
 
-        burgerOverlay.classList.remove("visibility");
-        burgerOverlay.classList.remove("showBurger");
-      }
-    });
+    //     burgerOverlay.classList.remove("visibility");
+    //     burgerOverlay.classList.remove("showBurger");
+    //   }
+    // });
 
     mail__container.addEventListener("click", () => {
       if (menuOpen) {

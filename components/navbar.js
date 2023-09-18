@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="div__logo_shield">
         <img
           className="logo_shield inactive"
-          src="/assets/logo_shield7.png"
+          src="/assets/logo_shield7.webp"
         ></img>
       </div>
 
