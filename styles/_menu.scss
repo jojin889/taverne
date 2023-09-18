@@ -52,18 +52,14 @@
             
         .menu__categorie {
 
-
             font-size: 16px;
-
             color:floralwhite;
             text-shadow: 1px 1px 0px #000000;
             width: 100%;
             border: 1px solid rgba(61, 23, 5, 0.603);
             border-radius: 10px;
-            // background-image: linear-gradient(to bottom, #210d05, #27130b, #2e1910, #361e13, #3d2416, #3f2617, #422817, #442a18, #422917, #402716, #3f2615, #3d2514);
             background-image: url("../public/assets/bois7BadQualityDarker.jpg");
             background-size: cover;
-            
             padding-bottom: 20px;
 
             .details_viande--first {
@@ -73,7 +69,6 @@
                 font-size: 14px;
                 margin-bottom: 20px;
             }
-
         }
 
         .flex {
@@ -111,6 +106,10 @@
             font-size: 30px;
         }
 
+        h2 {
+            text-decoration: underline;
+        }
+
 
         .italic__comment {
             font-size: 14px;
@@ -120,15 +119,12 @@
         }
         font-size: 15px;
 
-
         h3 {
-                
             font-size: 30px;
             display: inline-block;
             border-bottom: 4px solid $color2;
-            // margin: 5%;
-
         }
+
         .details_viande {
             font-size: 15px;
             display: inline;
@@ -163,8 +159,6 @@
 
 @media only screen and (max-width: 1024px) {
     #menu {
-
-        // min-height:610vh;
 
         .menu__categories {
             width: 85%;
@@ -243,6 +237,7 @@
                 font-size: 35px;
                 display: flex;
                 align-self: self-start;
+                margin-top: 0.7em;
                 justify-content: center;
             }
 

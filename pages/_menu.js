@@ -198,7 +198,6 @@ export default function Menu() {
               <span className="menu__descriptif-MenuTaverne-price">
                 {menuTaverne[0].prix} €
               </span>
-              {/* <span style={{ fontSize: "24px" }}>40,00 €</span> */}
               <h2>Entrées</h2>
               <p>{menuTaverne[0].entree1}</p>
               <p>OU</p>
