@@ -23,7 +23,6 @@ const Mentions = () => {
             <li>Nº d'identification TVA : <span>FR 30 815261920</span></li>
             <li>Responsables  : <span>MR SICILIA TONELLO ROMAIN</span></li>
             <li> <div></div> <span> MR BERTRAND MARC</span></li>
-          
           </ul>
         </div>
       </div>
