@@ -1,17 +1,33 @@
 .page404 {
-    height: fit-content;
     width: 932px;
     margin: auto;
+    height: 80vh;
 
-    .container404 {
+    h1  {
+        text-align: center;
+        padding-top: 50%;
+    }
+}
 
-        h1 {
-            font-size: 55px;
-            padding-top: 400px;
-            margin-bottom: 300px;
+@media only screen and (max-width: 800px) {
+
+    .page404 {
+        width: 932px;
+        margin: auto;
+        height: 170vh;
+    
+        h1  {
             text-align: center;
+            padding-top: 50%;
+            font-size: 70px;
+            width: 80%;
+            margin: auto;
         }
     }
-
-
+    
+    footer {
+        padding-bottom: 200px;
+    }
 }
+
+

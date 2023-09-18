@@ -22,7 +22,7 @@ const Event = () => {
                 festifs :
                 <br /> Nous vous proposons une location du brasero seul ou avec
                 viandes et accompagnements, ou même une prestation complète
-                (formule traiteur et cuisine sur place)
+                (formule traiteur et cuisine sur place).
                 <br /> Nous sommes à votre disposition pour plus de
                 renseignements.
               </p>

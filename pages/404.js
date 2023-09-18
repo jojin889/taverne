@@ -6,10 +6,7 @@ const Page404 = () => {
     <>
       <Navbar />
       <div className="page404" id="page404">
-        <div className="container404">
-          <h1>Page introuvable...</h1>
-
-        </div>
+        <h1>Page introuvable...</h1>
       </div>
       <Footer />
     </>
