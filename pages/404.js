@@ -8,6 +8,8 @@ const Page404 = () => {
       <div className="page404" id="page404">
         <div className="container404">
           <h1>Page introuvable...</h1>
+          <div className="test"></div>
+
         </div>
       </div>
       <Footer />

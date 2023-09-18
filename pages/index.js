@@ -7,7 +7,6 @@ import Horaire from "../components/horaire";
 import Gallery from "../components/galerie";
 
 const Home = () => {
-
   return (
     <>
       <Navbar />

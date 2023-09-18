@@ -10,10 +10,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>La Taverne</title>
       </Head>
-      {/* <div id="loading"> */}
         <div id="page-loader">
           <div className="spinner"></div>
-        {/* </div> */}
       </div>
       <Component {...pageProps} />
     </>

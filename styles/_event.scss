@@ -2,6 +2,10 @@
 
 
     .event__container {
+
+        .test {
+            width: 930px;
+        }
         
         background-image: url("../public/assets/assetMeat15-min.webp");
         background-size: cover;
@@ -152,38 +156,4 @@
         }
     }
 }
-
-
-// @media only screen and (max-width: 885px) {
-//     .brasero__container {
-//         display:flex;
-//         flex-direction: column !important;
-//         width: 80% !important;
-
-
-//         .brasero__textdiv {
-//             margin-left: 0px !important;
-//             padding-top: 26px;
-//         }
-//     }
-
-//     .privatisation__container {
-//         display:flex;
-//         flex-direction: column !important;
-//         width: 80% !important;
-
-
-
-//         .privatisation__textdiv {
-//             margin-left: 0px !important;
-//             padding-top: 26px;
-//         }
-//     }
-// }
 }
-
-// @media only screen and (max-width: 715px) {
-//     .event__container {        
-//         height: 340vh !important;
-//     }
-// }

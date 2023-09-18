@@ -1,11 +1,14 @@
 .page404 {
-    height: 80vh;
+    height: fit-content;
+    width: 932px;
+    margin: auto;
 
     .container404 {
 
         h1 {
             font-size: 55px;
             padding-top: 400px;
+            margin-bottom: 300px;
             text-align: center;
         }
     }

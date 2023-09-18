@@ -30,9 +30,9 @@ const Event = () => {
             </div>
           </div>
           <h1>Privatisation</h1>
-
+          <div className="test"></div>
+          {/* DIV TEST = POUR FAIRE UNE LARGEUR, POUR QUE LA NAVBAR SOIT NORMALE... */}
           <div className="privatisation__container">
-
             <Image
               src="/assets/fb/salle.jpg"
               alt="Salle"
