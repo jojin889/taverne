@@ -1,3 +1,6 @@
+import { faCreditCard, faMoneyCheckDollar, faCoins } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Horaire = () => {
   return (
     <div className="horaire" id="horaire">
@@ -45,15 +48,15 @@ const Horaire = () => {
       <div className="paiement">
         <div className="paiement_div">
           Carte bleue &nbsp;
-          <i className="fas fa-credit-card"></i>
+          <FontAwesomeIcon icon={faCreditCard} />
         </div>
         <div className="paiement_div">
           Carte restaurant
-          <i className="fas fa-money-check-alt"></i>
+          <FontAwesomeIcon icon={faMoneyCheckDollar} />
         </div>
         <div className="paiement_div">
           Espèce &nbsp;
-          <i className="fas fa-coins"></i>
+          <FontAwesomeIcon icon={faCoins} />
         </div>
       </div>
     </div>

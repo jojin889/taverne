@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
   return (
@@ -11,21 +12,20 @@ const Navbar = () => {
         </div>
         <div className="socials">
           <a href="https://www.facebook.com/latavernetignieu" target="_blank">
-            <i className="fab fa-facebook"></i>
+            <FontAwesomeIcon icon={faFacebook} />
           </a>
           <div>
             <a
               target="_blank"
               href="https://www.instagram.com/la_taverne_tignieu/"
             >
-              <i className="fab fa-instagram"></i>
+              <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>
         </div>
       </div>
       <div className="div__logo_shield">
         <img
-
           className="logo_shield inactive"
           src="/assets/logo_shield7.png"
         ></img>
@@ -59,10 +59,10 @@ const Navbar = () => {
               <a href="/_event">Prestations</a>
             </li>
             <li>
-              <a href="https://www.lataverne-tignieu.fr/#horaire">Horaires</a>
+              <a href="https://taverne-green.vercel.app/#horaire">Horaires</a>
             </li>
             <li>
-              <a href="https://www.lataverne-tignieu.fr/#mail">Contact</a>
+              <a href="https://taverne-green.vercel.app/#mail">Contact</a>
             </li>
           </ul>
         </div>

@@ -47,7 +47,6 @@ h5 {
     transition:ease-in-out 0.2s;
 
     &:hover {
-        color: $color3;
         transform: scale(1.6);
         transition:ease-in-out 0.2s;
         }
@@ -66,8 +65,6 @@ h5 {
 
   @media only screen and (max-width: 1024px) {
     .hero {
-        // background-image: url("../public/assets/viande.jpg"),url("../public/assets/viande3.jpg"),;
-        // background-image: url("../public/assets/photo8.jpg");
         background-image: url("../public/assets/assetMeat8-min.webp");
         background-size: cover;
         background-repeat: no-repeat;
@@ -80,7 +77,6 @@ h5 {
                 font-size: 95px;
                 letter-spacing: 4px;
                 text-shadow: black 0.1em 0.1em 0.2em;
-                border: 2px solid white;
                 padding: 30px 86px;
                 -webkit-box-shadow: 0px 20px 10px 0px rgba(27,8,1,0.7); 
                 box-shadow: 0px 20px 10px 0px rgba(27,8,1,0.7);
@@ -101,7 +97,6 @@ h5 {
 @media only screen and (max-width: 800px) {
     .hero {
         height: 180vh;
-        // background-image: url("../public/assets/viande.jpg"),url("../public/assets/viande3.jpg"),;
         background-image: url("../public/assets/assetMeat8-min.webp");
         background-size: cover;
         background-repeat: no-repeat;
@@ -114,14 +109,12 @@ h5 {
                 font-size: 54px;
                 letter-spacing: 4px;
                 text-shadow: black 0.1em 0.1em 0.2em;
-                border: 1px solid white;
                 padding: 30px 86px;
                 -webkit-box-shadow: 5px 5px 15px 5px #371101; 
                 box-shadow: none;
             }
 
             h3 {
-                // font-style: italic;
                 font-size: 40px;
                 margin: 220px 0px 0px;
                 text-shadow: black 0.1em 0.1em 0.2em;
@@ -139,7 +132,6 @@ h5 {
 }
 @media only screen and (max-width: 500px) {
     .hero {
-        // background-image: url("../public/assets/viande.jpg"),url("../public/assets/viande3.jpg"),;
         background-image: url("../public/assets/assetMeat8-min.webp");
         background-size: cover;
         background-repeat: no-repeat;
@@ -155,7 +147,6 @@ h5 {
                 font-size: 60px;
                 letter-spacing: 4px;
                 text-shadow: black 0.1em 0.1em 0.2em;
-                border: 1px solid white;
                 padding: 30px 86px;
                 margin: 200px 0 0 0;
                 -webkit-box-shadow: 5px 5px 15px 5px #371101; 
@@ -163,7 +154,6 @@ h5 {
             }
 
             h3 {
-                // font-style: italic;
                 font-size: 50px;
                 margin: 270px 0px 0px;
                 text-shadow: black 0.1em 0.1em 0.2em;
@@ -179,9 +169,3 @@ h5 {
         }
     }
 }
-
-// @media only screen and (max-width: 375px) {
-//     .hero {
-//         height: 200vh;
-//     }
-// }

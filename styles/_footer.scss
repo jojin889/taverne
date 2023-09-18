@@ -55,7 +55,7 @@ footer {
             margin: 12px 0px;
             font-family: 'Inknut Antiqua';
 
-            i {
+            svg {
                 margin-right: 10px;
             }
 
@@ -74,12 +74,11 @@ footer {
     margin: 40px;
 }
 
-.fa-map-marker-alt {
-    font-size: 20px;
+.fa-location-dot {
+    font-size: 30px;
 }
-.fa-phone-alt {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+.fa-phone {
+    font-size: 30px;
 }
 
 

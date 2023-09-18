@@ -3,10 +3,9 @@ window.onload = function () {
   console.log("url->", url);
 
   function myFunction() {
-    // document.getElementById("loloading").style.display = "block";
-    document.getElementById("loading").style.display = "none";
-    const loader = document.getElementById("page-loader");
-    loader.classList.add(".hidden");
+    // document.getElementById("loading").style.display = "none";
+    document.getElementById("page-loader").style.display = "none";
+    // loader.classList.add(".hidden");
   }
   myFunction();
 

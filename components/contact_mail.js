@@ -1,4 +1,8 @@
 import Map from "./map";
+import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Mail = () => {
   return (
@@ -64,21 +68,20 @@ const Mail = () => {
         <button type="submit">Envoyer</button>
       </form>
 
-      <div className="cursive"><i className="far fa-envelope"></i> 
+      <div className="cursive">
+        <FontAwesomeIcon icon={faEnvelope} />
         <span> &nbsp;latavernetignieu@gmail.com</span>
         <br />
         <br />
-
-        <i className="fas fa-map-marker-alt"></i> &nbsp;23 Boulevard Ampère
-            38230 Tignieu-Jameyzieu
-            <br />
+        <FontAwesomeIcon icon={faLocationDot} /> &nbsp;23 Boulevard Ampère 38230
+        Tignieu-Jameyzieu
         <br />
-            <i className="fas fa-phone-alt"></i><span className="cursive"> &nbsp;06 49 79 69 74</span>
-            
+        <br />
+        <FontAwesomeIcon icon={faPhone} />
+        <span className="cursive"> &nbsp;06 49 79 69 74</span>
       </div>
 
       <Map />
-
     </div>
   );
 };

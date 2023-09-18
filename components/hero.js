@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { navVariants2, navVariants3, navVariants4 } from "../public/motion";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   return (
@@ -34,7 +36,7 @@ const Hero = () => {
           </motion.div>
         </div>
         <Link href="#down">
-          <i className="fas fa-chevron-down"></i>
+        <FontAwesomeIcon icon={faChevronDown} />
         </Link>
       </div>
 
