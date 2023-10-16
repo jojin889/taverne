@@ -3,6 +3,7 @@ import { groq } from "next-sanity";
 import Footer from "../components/footer";
 import { client } from "../sanity/lib/client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Menu() {
   const [entrees, setEntrees] = useState(["1", "2"]);
@@ -69,6 +70,15 @@ export default function Menu() {
       <div className="menu" id="menu">
         <div className="menu__container">
           <h1 className="menu__title">La carte</h1>
+          <a href="/assets/carte_boisson.pdf" download="carte_boisson">→ Télécharger la carte des boissons</a>
+          <a href="/assets/carte_boisson.pdf" download="carte_boisson">
+          <Image
+              src="/assets/img_pdf.webp"
+              alt="pdf boisson"
+              width={100}
+              height={200}
+            />
+            </a>
           <div className="menu__categories">
             <h3>Entrées</h3>
 
