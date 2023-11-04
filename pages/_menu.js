@@ -13,6 +13,8 @@ export default function Menu() {
   const [sauces, setSauces] = useState(["1", "2"]);
   const [menuDuJour, setMenuDuJour] = useState(["1", "2"]);
   const [menuTaverne, setMenuTaverne] = useState(["1", "2"]);
+  const [viandesRaces, setViandesRaces] = useState(["1", "2"]);
+  const [accompagnement, setAccompagnement] = useState(["1", "2"]);
 
   async function getData() {
     const queryEntrees = groq`
@@ -41,6 +43,14 @@ export default function Menu() {
     const queryMenuDuJour = groq`
     *[_type=='menuDuJour']
     `;
+
+    const queryViandeRaces = groq`
+    *[_type=='viandeRaces']
+    `;
+    const queryAccompagnement = groq`
+    *[_type=='accompagnement']
+    `;
+
     const entrees = await client.fetch(queryEntrees);
     setEntrees(entrees);
     const viandes = await client.fetch(queryViandes);
@@ -55,8 +65,13 @@ export default function Menu() {
     setMenuTaverne(menuTaverne);
     const menuDuJour = await client.fetch(queryMenuDuJour);
     setMenuDuJour(menuDuJour);
+    const viandesRaces = await client.fetch(queryViandeRaces);
+    setViandesRaces(viandesRaces);
+    const accompagnement = await client.fetch(queryAccompagnement);
+    setAccompagnement(accompagnement);
 
-    console.log(menuTaverne)
+    console.log(accompagnement[0].text)
+
   }
 
   useEffect(() => {
@@ -70,15 +85,17 @@ export default function Menu() {
       <div className="menu" id="menu">
         <div className="menu__container">
           <h1 className="menu__title">La carte</h1>
-          <a href="/assets/carte_boisson.pdf" download="carte_boisson">→ Télécharger la carte des boissons</a>
           <a href="/assets/carte_boisson.pdf" download="carte_boisson">
-          <Image
+            → Télécharger la carte des boissons
+          </a>
+          <a href="/assets/carte_boisson.pdf" download="carte_boisson">
+            <Image
               src="/assets/img_pdf.webp"
               alt="pdf boisson"
               width={100}
               height={200}
             />
-            </a>
+          </a>
           <div className="menu__categories">
             <h3>Entrées</h3>
 
@@ -96,20 +113,33 @@ export default function Menu() {
             <h3>Viandes</h3>
 
             <div className="menu__categorie flex">
-              <p className="details_viande--first">
-                Race : KOD jersey (Danemark)
-              </p>
-              <p className="details_viande">
-                {/* <ul>
-                  <li>- Faux filet de bœuf - 10.50€ / 100gr</li>
-                  <li>- Entrecôte de bœuf - 10.50€ / 100gr</li>
-                  <li>- Côte de bœuf - 10.50€ / 100gr</li>
-                </ul> */}
-              </p>
+              <p className="details_viande"></p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>{viandesRaces[0].NomRace1}</th>
+                      <th>{viandesRaces[0].NomRace2}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Faux filet de bœuf</td>
+                      <td>{viandesRaces[0].prix1FauxFilet}</td>
+                      <td>{viandesRaces[0].prix2FauxFilet}</td>
+                    </tr>
+                    <tr>
+                      <td>Entrecôte de bœuf</td>
+                      <td>{viandesRaces[0].prix1Entrecote}</td>
+                      <td>{viandesRaces[0].prix2Entrecote}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              
               <p className="details_viande--third">
-                (Les différents poids des pièces disponibles vous seront
+                Les différents poids des pièces disponibles vous seront
                 communiqués lors de votre commande et le prix sera calculé en
-                fonction de votre choix du poids.)
+                fonction de votre choix du poids.
               </p>
               <ul>
                 {viandes.map((viande) => (
@@ -130,11 +160,11 @@ export default function Menu() {
                 ))}
               </ul>
               <p className="italic__comment">
-                <i className="fas fa-arrow-right"></i> Nos plats sont
-                accompagnés de mille feuilles de pommes de terre et de légumes
-                frais rôtis
+                <i className="fas fa-arrow-right"></i> {accompagnement[0].text}
               </p>
             </div>
+
+
             <h3>Poissons</h3>
 
             <div className="menu__categorie">
@@ -148,9 +178,7 @@ export default function Menu() {
               </ul>
 
               <p className="italic__comment">
-                <i className="fas fa-arrow-right"></i> Nos plats sont
-                accompagnés de mille feuilles de pommes de terre et de légumes
-                frais rôtis
+                <i className="fas fa-arrow-right"></i> {accompagnement[0].text}
               </p>
             </div>
 
@@ -211,16 +239,14 @@ export default function Menu() {
               <h2>Entrées</h2>
               <p>{menuTaverne[0].entree1}</p>
               <p>OU</p>
-              <p>
-                {menuTaverne[0].entree2}
-              </p>
-              <p>{(menuTaverne[0].entree3 ? "OU" : "")}</p>
+              <p>{menuTaverne[0].entree2}</p>
+              <p>{menuTaverne[0].entree3 ? "OU" : ""}</p>
               <p>{menuTaverne[0].entree3}</p>
               <h2>Plats</h2>
               <p>{menuTaverne[0].plat1}</p>
               <p>OU</p>
               <p>{menuTaverne[0].plat2}</p>
-              <p>{(menuTaverne[0].plat3 ? "OU" : "")}</p>
+              <p>{menuTaverne[0].plat3 ? "OU" : ""}</p>
               <p>{menuTaverne[0].plat3}</p>
               <h2>Desserts</h2>
               <p>Au choix à la carte</p>

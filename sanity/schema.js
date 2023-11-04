@@ -7,6 +7,8 @@ import sauce from "./schemas/sauce";
 import images from "./schemas/images";
 import menuDuJour from "./schemas/menuDuJour";
 import menuTaverne from "./schemas/menuTaverne";
+import viandeRaces from "./schemas/viandeRaces";
+import accompagnement from "./schemas/accompagnement";
 
 export const schema = {
   types: [
@@ -18,6 +20,8 @@ export const schema = {
     images,
     blockContent,
     menuDuJour,
-    menuTaverne
+    menuTaverne,
+    viandeRaces,
+    accompagnement
   ],
 };
