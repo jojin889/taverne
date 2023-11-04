@@ -124,7 +124,7 @@ export default function Menu() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Faux filet de bœuf</td>
+                      <td>Côte de bœuf</td>
                       <td>{viandesRaces[0].prix1FauxFilet}</td>
                       <td>{viandesRaces[0].prix2FauxFilet}</td>
                     </tr>

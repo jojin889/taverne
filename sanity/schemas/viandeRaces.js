@@ -14,8 +14,8 @@ export default {
       type: "string",
     },
     {
-      name: "prix1FauxFilet",
-      title: "Prix race n°1 : Faux filet de boeuf",
+      name: "prix1Cote",
+      title: "Prix race n°1 : Côte de boeuf",
       type: "string",
     },
     {
@@ -24,8 +24,8 @@ export default {
       type: "string",
     },
     {
-      name: "prix2FauxFilet",
-      title: "Prix race n°2 : Faux filet de boeuf",
+      name: "prix2Cote",
+      title: "Prix race n°2 : Côte de boeuf",
       type: "string",
     },
     {
