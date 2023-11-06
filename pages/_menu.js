@@ -70,8 +70,38 @@ export default function Menu() {
     const accompagnement = await client.fetch(queryAccompagnement);
     setAccompagnement(accompagnement);
 
-    console.log(accompagnement[0].text)
+    // console.log(entrees);
+    
+    function compareValues(key, order = 'desc') {
+      return function innerSort(a, b) {
+        if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+          // property doesn't exist on either object
+          return 0;
+        }
+    
+        const varA = (typeof a[key] === 'string')
+          ? parseFloat(a[key]) : a[key];
+        const varB = (typeof b[key] === 'string')
+          ? parseFloat(b[key]) : b[key];
+    
+        let comparison = 0;
+        if (varA > varB) {
+          comparison = 1;
+        } else if (varA < varB) {
+          comparison = -1;
+        }
+        return (
+          (order === 'desc') ? (comparison * -1) : comparison
+        );
+      };
+    }
 
+    entrees.sort(compareValues('price', 'desc'));
+    viandes.sort(compareValues('price', 'desc'));
+    desserts.sort(compareValues('price', 'desc'));
+    poissons.sort(compareValues('price', 'desc'));
+
+    
   }
 
   useEffect(() => {
@@ -196,6 +226,33 @@ export default function Menu() {
             </div>
 
             <br />
+
+            <h3>Menu "La Taverne"</h3>
+
+            <div className="menu__categorie">
+              <span className="menu__descriptif-MenuTaverne-price">
+                {menuTaverne[0].prix} €
+              </span>
+              <h2>Entrées</h2>
+              <p>{menuTaverne[0].entree1}</p>
+              <p>OU</p>
+              <p>{menuTaverne[0].entree2}</p>
+              <p>{menuTaverne[0].entree3 ? "OU" : ""}</p>
+              <p>{menuTaverne[0].entree3}</p>
+              <h2>Plats</h2>
+              <p>{menuTaverne[0].plat1}</p>
+              <p>OU</p>
+              <p>{menuTaverne[0].plat2}</p>
+              <p>{menuTaverne[0].plat3 ? "OU" : ""}</p>
+              <p>{menuTaverne[0].plat3}</p>
+              <h2>Desserts</h2>
+              <p>Au choix à la carte</p>
+              {/* <p>{props.menuDessert1[0].fields.menuDessert1}</p>
+              <p>OU</p>
+              <p>{props.menuDessert2[0].fields.menuDessert2}</p>
+              <p>OU</p>
+              <p>{props.menuDessert3[0].fields.menuDessert3}</p> */}
+            </div>
             <p>
               Tous nos plats sont faits maison et élaborés à partir de produits
               frais et de saison ! Notre sélection de viande est issue
@@ -230,32 +287,7 @@ export default function Menu() {
                 (Ou Plat du jour &nbsp;{menuDuJour[0].platDuJourPrice} €)
               </p>
             </div>
-            <h3>Menu "La Taverne"</h3>
-
-            <div className="menu__categorie">
-              <span className="menu__descriptif-MenuTaverne-price">
-                {menuTaverne[0].prix} €
-              </span>
-              <h2>Entrées</h2>
-              <p>{menuTaverne[0].entree1}</p>
-              <p>OU</p>
-              <p>{menuTaverne[0].entree2}</p>
-              <p>{menuTaverne[0].entree3 ? "OU" : ""}</p>
-              <p>{menuTaverne[0].entree3}</p>
-              <h2>Plats</h2>
-              <p>{menuTaverne[0].plat1}</p>
-              <p>OU</p>
-              <p>{menuTaverne[0].plat2}</p>
-              <p>{menuTaverne[0].plat3 ? "OU" : ""}</p>
-              <p>{menuTaverne[0].plat3}</p>
-              <h2>Desserts</h2>
-              <p>Au choix à la carte</p>
-              {/* <p>{props.menuDessert1[0].fields.menuDessert1}</p>
-              <p>OU</p>
-              <p>{props.menuDessert2[0].fields.menuDessert2}</p>
-              <p>OU</p>
-              <p>{props.menuDessert3[0].fields.menuDessert3}</p> */}
-            </div>
+            
             <h3>La Formule de KARADOC</h3>
 
             <div className="menu__categorie">
