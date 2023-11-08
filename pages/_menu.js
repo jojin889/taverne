@@ -101,6 +101,8 @@ export default function Menu() {
     desserts.sort(compareValues('price', 'desc'));
     poissons.sort(compareValues('price', 'desc'));
 
+    console.log(menuTaverne[0])
+
     
   }
 
@@ -268,7 +270,7 @@ export default function Menu() {
                 </span>
               </p>
               <p>
-                Steak haché Angus, pommes de terre rissolées, <br />1 Boule de
+                Steak haché Angus, purée, <br />1 Boule de
                 glace – Sirop au choix{" "}
               </p>
             </div>
@@ -292,7 +294,7 @@ export default function Menu() {
 
             <div className="menu__categorie">
               <span className="menu__descriptif-Apartager-price">
-                A partager- 25,00 €
+                A partager- 27,00 €
               </span>
               <p>(Selon arrivage)</p>
               <p>A partir de 6 personnes !</p>
