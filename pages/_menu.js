@@ -158,11 +158,11 @@ export default function Menu() {
                     <tr>
                       <td>Côte de bœuf</td>
                       <td>{viandesRaces[0].prix1Cote}</td>
-                      <td>{viandesRaces[0].prix2FauxFilet}</td>
+                      <td>{viandesRaces[0].prix2Cote}</td>
                     </tr>
                     <tr>
                       <td>Entrecôte de bœuf</td>
-                      <td>{viandesRaces[0].prix2Cote}</td>
+                      <td>{viandesRaces[0].prix1Entrecote}</td>
                       <td>{viandesRaces[0].prix2Entrecote}</td>
                     </tr>
                   </tbody>
