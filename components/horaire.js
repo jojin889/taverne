@@ -39,6 +39,10 @@ const Horaire = () => {
         </tbody>
       </table>
 
+      <p className="cursive1">
+        Dernières prises de commandes à 13h30 le midi et 21h30 le soir.<br></br>
+      </p>
+
       <p>
         Nous vous conseillons de réserver au : <br></br>
         <span className="cursive"> 06 49 79 69 74</span>
@@ -51,7 +55,7 @@ const Horaire = () => {
           <FontAwesomeIcon icon={faCreditCard} />
         </div>
         <div className="paiement_div">
-          Carte restaurant
+          Carte & tickets restaurant
           <FontAwesomeIcon icon={faMoneyCheckDollar} />
         </div>
         <div className="paiement_div">

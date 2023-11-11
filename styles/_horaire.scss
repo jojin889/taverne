@@ -15,7 +15,10 @@
     padding-top: 20px;
     background-size: cover;
 
-    
+    .cursive1 {
+        font-style: initial;
+    }
+
     h4 {
         text-align: center;
         font-size: 36px;
@@ -52,8 +55,9 @@
 
         .paiement_div {
             display: flex;
-            margin-right: 35px;
+            margin-right: 25px;
             flex-direction: column;
+            text-align: center;
             justify-content: center;
             align-items: center;
 
