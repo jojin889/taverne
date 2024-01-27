@@ -282,6 +282,7 @@ export default function Menu() {
               <span className="menu__descriptif-FormuleJour-price">
                 {menuDuJour[0].fullMenuPrice} €
               </span>
+              <p>Uniquement du mardi au vendredi midi</p>
               <p className="menu__descriptif-FormuleJour">
                 Plat du jour, dessert du jour et café
               </p>
