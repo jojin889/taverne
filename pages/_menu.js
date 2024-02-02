@@ -270,7 +270,7 @@ export default function Menu() {
                 </span>
               </p>
               <p>
-                Steak haché Angus, purée, <br />1 Boule de
+                Steak haché Angus, pommes de terre grenaille, <br />1 Boule de
                 glace – Sirop au choix{" "}
               </p>
             </div>
